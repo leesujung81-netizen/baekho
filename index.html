@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#1a2a4a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="백호시연선생 — 명리학 기반 진로·진학 상담">
+<meta property="og:description" content="타고난 기질과 강점으로 진로를 설계합니다 · 전화 상담 · 런칭 특가 70,000원">
+<title>백호시연선생 — 명리학 기반 진로·진학 상담</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nv:#1a2a4a;--nv2:#253557;--nv3:#0f1e38;
+  --gr:#2d6a4f;--gr2:#40916c;--gr3:#52b788;
+  --gd:#c9a040;--gd2:#e8d08a;--gd3:#f5e9b8;
+  --cr:#faf8f4;--cr2:#f2ede4;--cr3:#ede5d8;
+  --txt:#2c2c2c;--muted:#7a7a8a;--border:#ddd8ce;
+  --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans KR',sans-serif;
+  background:var(--white);color:var(--txt);
+  line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(64px + env(safe-area-inset-bottom));
+}
+
+/* ════ TOP BAR ════ */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:56px;padding:0 18px;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .3s,box-shadow .3s;
+}
+.topbar.t{background:transparent}
+.topbar.s{
+  background:rgba(255,255,255,.96);
+  box-shadow:0 2px 16px rgba(0,0,0,.07);
+  backdrop-filter:blur(14px);
+}
+.tb-logo{
+  font-family:'Noto Serif KR',serif;
+  font-size:1.1rem;font-weight:700;
+  color:white;text-decoration:none;
+  text-shadow:0 1px 8px rgba(0,0,0,.4);
+  transition:color .3s;
+}
+.topbar.s .tb-logo{color:var(--nv);text-shadow:none}
+.tb-logo span{color:var(--gd2)}
+.topbar.s .tb-logo span{color:var(--gd)}
+.tb-kakao{
+  display:flex;align-items:center;gap:6px;
+  padding:8px 14px;border-radius:24px;
+  background:rgba(255,255,255,.18);
+  border:1.5px solid rgba(255,255,255,.38);
+  color:white;font-size:.75rem;font-weight:700;
+  text-decoration:none;backdrop-filter:blur(6px);
+  transition:all .2s;
+}
+.topbar.s .tb-kakao{background:#FEE500;border-color:#FEE500;color:#3A1D1D}
+.tb-call{
+  display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.18);
+  border:1.5px solid rgba(255,255,255,.38);
+  color:white;font-size:1.05rem;
+  text-decoration:none;margin-left:8px;
+  transition:all .2s;flex-shrink:0;
+}
+.topbar.s .tb-call{background:rgba(26,42,74,.1);border-color:rgba(26,42,74,.3);color:var(--nv)}
+
+/* ════ HERO ════ */
+#hero{
+  height:100svh;min-height:600px;
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--nv3) 0%,var(--nv) 40%,#1e3a2a 100%);
+}
+.hero-img-bg{
+  position:absolute;inset:0;
+  background-image:url('IMG_5483.PNG');
+  background-size:cover;background-position:center 20%;
+  opacity:.22;
+}
+.hero-ov{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(
+    170deg,
+    rgba(10,20,40,.5) 0%,
+    rgba(15,30,55,.25) 45%,
+    rgba(5,15,30,.8) 100%
+  );
+}
+.hero-body{
+  position:absolute;bottom:0;left:0;right:0;
+  z-index:2;padding:0 22px 96px;
+}
+.h-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(201,160,64,.15);
+  border:1px solid rgba(201,160,64,.35);
+  backdrop-filter:blur(10px);
+  color:var(--gd3);font-size:.7rem;font-weight:700;
+  letter-spacing:1.5px;padding:6px 15px;
+  border-radius:20px;margin-bottom:14px;
+}
+#hero h1{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(1.75rem,6.5vw,2.5rem);
+  font-weight:700;line-height:1.25;
+  letter-spacing:-.5px;color:white;
+  text-shadow:0 2px 20px rgba(0,0,0,.35);
+  margin-bottom:10px;
+}
+#hero h1 em{color:var(--gd2);font-style:normal}
+.h-sub{
+  font-size:.84rem;color:rgba(255,255,255,.78);
+  line-height:1.8;margin-bottom:22px;
+}
+.h-btns{display:flex;gap:10px}
+.hbtn{
+  flex:1;padding:13px 8px;border-radius:14px;
+  font-size:.88rem;font-weight:700;text-align:center;
+  text-decoration:none;border:none;
+  font-family:inherit;cursor:pointer;transition:all .2s;
+}
+.hbtn-gold{
+  background:linear-gradient(135deg,var(--gd),#b8891a);
+  color:var(--nv);
+  box-shadow:0 4px 16px rgba(201,160,64,.35);
+}
+.hbtn-glass{
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.38);
+  backdrop-filter:blur(8px);color:white;
+}
+.hero-wave{
+  position:absolute;bottom:-1px;left:0;right:0;z-index:3;
+  pointer-events:none;
+}
+.hero-wave svg{display:block;width:100%}
+
+/* ════ QUICK STRIP ════ */
+.qstrip{
+  background:var(--nv);
+  display:flex;overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;padding:16px 18px;gap:12px;
+}
+.qstrip::-webkit-scrollbar{display:none}
+.qchip{
+  flex-shrink:0;scroll-snap-align:start;
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;padding:10px 16px;
+  font-size:.78rem;color:rgba(255,255,255,.85);font-weight:600;
+  white-space:nowrap;
+}
+.qchip .qi{font-size:1rem}
+.qchip.gold{
+  background:rgba(201,160,64,.15);
+  border-color:rgba(201,160,64,.3);color:var(--gd3);
+}
+
+/* ════ SECTION 공통 ════ */
+.sec{padding:64px 20px}
+.sec.cr{background:var(--cr)}
+.sec.cr2{background:var(--cr2)}
+.sec.navy{
+  background:linear-gradient(145deg,var(--nv),var(--nv2));
+  color:white;
+}
+.sec-head{text-align:center;margin-bottom:32px}
+.slabel{
+  font-size:.68rem;letter-spacing:3px;
+  color:var(--gr2);text-transform:uppercase;font-weight:700;
+  margin-bottom:8px;
+}
+.sec.navy .slabel{color:var(--gd2);opacity:.8}
+.stitle{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(1.4rem,5vw,1.9rem);
+  font-weight:700;color:var(--nv);
+  line-height:1.3;margin-bottom:8px;
+}
+.sec.navy .stitle{color:white}
+.sdiv{
+  width:36px;height:3px;
+  background:linear-gradient(90deg,var(--gr),var(--gr3));
+  border-radius:2px;margin:12px auto 0;
+}
+.sec.navy .sdiv{background:linear-gradient(90deg,var(--gd),var(--gd2))}
+
+/* ════ WHY CARDS ════ */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.why-card{
+  background:white;border-radius:14px;padding:20px 16px;
+  border:1px solid var(--border);
+}
+.why-ico{font-size:1.6rem;margin-bottom:10px}
+.why-card h3{font-size:.82rem;font-weight:700;color:var(--nv);margin-bottom:6px;line-height:1.4}
+.why-card p{font-size:.72rem;color:var(--muted);line-height:1.7}
+.why-quote{
+  margin-top:20px;
+  background:var(--nv);border-radius:16px;
+  padding:22px 20px;
+  border-left:4px solid var(--gd);
+}
+.why-quote-txt{
+  font-family:'Noto Serif KR',serif;
+  font-size:.88rem;color:white;line-height:1.8;
+}
+.why-quote-by{font-size:.72rem;color:var(--gd2);margin-top:8px;opacity:.8}
+
+/* ════ SERVICE CARDS ════ */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc-card{
+  background:white;border-radius:14px;padding:18px 14px;
+  border:1px solid var(--border);text-align:center;
+}
+.svc-ico{
+  width:52px;height:52px;border-radius:14px;
+  margin:0 auto 12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;
+  background:linear-gradient(135deg,rgba(45,106,79,.1),rgba(45,106,79,.04));
+  border:1px solid rgba(45,106,79,.15);
+}
+.svc-card h3{font-size:.8rem;font-weight:700;color:var(--nv);margin-bottom:6px;line-height:1.4}
+.svc-card p{font-size:.71rem;color:var(--muted);line-height:1.7}
+.svc-card.highlight{
+  grid-column:span 2;
+  background:linear-gradient(145deg,#f0f7f2,#e8f5e9);
+  border-color:rgba(45,106,79,.2);
+}
+.svc-card.highlight .svc-ico{
+  background:linear-gradient(135deg,#c8e6c9,#a5d6a7);
+  border:none;
+}
+
+/* ════ PRICING ════ */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.pcard{
+  border-radius:16px;padding:24px 16px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.pcard.regular{
+  background:white;border:2px solid var(--border);
+}
+.pcard.special{
+  background:linear-gradient(145deg,var(--nv),var(--nv2));
+  color:white;
+}
+.pcard.special::before{
+  content:'런칭 특가';
+  position:absolute;top:12px;right:-18px;
+  background:var(--gd);color:var(--nv);
+  font-size:.6rem;font-weight:700;
+  padding:3px 28px;transform:rotate(35deg);
+  letter-spacing:1px;
+}
+.pcard-lbl{font-size:.7rem;font-weight:600;letter-spacing:1px;margin-bottom:10px}
+.pcard.regular .pcard-lbl{color:var(--muted)}
+.pcard.special .pcard-lbl{color:var(--gd2);opacity:.8}
+.pcard-amt{font-size:1.65rem;font-weight:700;line-height:1;margin-bottom:4px}
+.pcard.regular .pcard-amt{color:var(--muted);text-decoration:line-through}
+.pcard.special .pcard-amt{color:var(--gd2)}
+.pcard-unit{font-size:.75rem}
+.pcard.regular .pcard-unit{color:var(--muted)}
+.pcard.special .pcard-unit{color:rgba(255,255,255,.5)}
+.pcard-items{margin-top:14px;display:flex;flex-direction:column;gap:5px}
+.pcard-item{font-size:.71rem;display:flex;align-items:center;gap:6px}
+.pcard.regular .pcard-item{color:var(--muted)}
+.pcard.special .pcard-item{color:rgba(255,255,255,.75)}
+.pcard-item::before{content:'✓';font-weight:700}
+.pcard.regular .pcard-item::before{color:var(--muted)}
+.pcard.special .pcard-item::before{color:var(--gr3)}
+
+/* ════ PROCESS ════ */
+.proc-list{display:flex;flex-direction:column;gap:0}
+.proc-item{
+  display:flex;gap:16px;padding:16px 0;
+  border-bottom:1px solid var(--border);
+}
+.proc-item:last-child{border-bottom:none}
+.proc-num{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gr),var(--gr2));
+  color:white;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:.8rem;flex-shrink:0;
+  box-shadow:0 4px 12px rgba(45,106,79,.3);
+}
+.proc-body h4{font-size:.88rem;font-weight:700;color:var(--nv);margin-bottom:4px}
+.proc-body p{font-size:.76rem;color:var(--muted);line-height:1.6}
+.proc-notice{
+  margin-top:16px;
+  background:rgba(45,106,79,.07);
+  border:1px solid rgba(45,106,79,.18);
+  border-radius:12px;padding:14px 16px;
+  font-size:.76rem;color:var(--txt);line-height:1.7;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.proc-notice strong{color:var(--gr)}
+
+/* ════ CALENDAR ════ */
+#calBox{
+  background:rgba(255,255,255,.08);
+  border:1.5px solid rgba(255,255,255,.2);
+  border-radius:16px;padding:16px;
+  margin-bottom:20px;
+}
+.cal-nav-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:10px;
+}
+.cal-nav-row button{
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.25);
+  color:white;border-radius:8px;
+  width:34px;height:34px;
+  font-size:1.15rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.cal-nav-row button:active{transform:scale(.88)}
+#calTitle{font-weight:700;font-size:.92rem;color:white}
+.cal-days{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  text-align:center;font-size:.62rem;
+  color:rgba(255,255,255,.4);font-weight:700;
+  letter-spacing:.5px;margin-bottom:5px;
+}
+#calGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cday{
+  aspect-ratio:1;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.72rem;font-weight:600;
+  color:rgba(255,255,255,.8);
+  cursor:pointer;transition:all .15s;position:relative;
+}
+.cday:active{transform:scale(.85)}
+.cday.empty,.cday.past{color:rgba(255,255,255,.2);cursor:not-allowed}
+.cday.sun{color:rgba(255,170,150,.85)}
+.cday.sat{color:rgba(150,210,255,.85)}
+.cday.blocked{
+  background:rgba(220,60,50,.18);
+  border:1px solid rgba(220,60,50,.28);
+  color:rgba(255,140,120,.4);cursor:not-allowed;
+}
+.cday.blocked::after{
+  content:'예약';position:absolute;bottom:1px;
+  font-size:.4rem;color:rgba(255,100,80,.45);
+}
+.cday.today{
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.28);
+}
+.cday.avail:hover{background:rgba(255,255,255,.1)}
+.cday.picked{
+  background:var(--gd);
+  border-color:#b8891a;color:var(--nv);
+  box-shadow:0 2px 8px rgba(201,160,64,.45);
+  font-weight:800;
+}
+.cal-legend{
+  display:flex;align-items:center;gap:10px;
+  justify-content:center;margin-top:10px;
+  font-size:.65rem;color:rgba(255,255,255,.4);
+}
+.leg-dot{width:10px;height:10px;border-radius:3px;display:inline-block;flex-shrink:0}
+.leg-dot.blocked{background:rgba(220,60,50,.22);border:1px solid rgba(220,60,50,.32)}
+.leg-dot.today-d{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.28)}
+.leg-dot.pick{background:var(--gd)}
+#calMsg{text-align:center;font-size:.7rem;color:rgba(232,208,138,.7);margin-top:6px;min-height:16px}
+
+/* ════ TIME SLOTS ════ */
+.time-section{margin-bottom:18px}
+.time-section label{display:block;font-size:.75rem;color:rgba(255,255,255,.55);font-weight:700;margin-bottom:8px;letter-spacing:.5px}
+.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tslot{
+  padding:12px 6px;text-align:center;
+  border:1.5px solid rgba(255,255,255,.2);
+  border-radius:10px;font-size:.76rem;
+  color:rgba(255,255,255,.65);cursor:pointer;
+  font-family:inherit;background:transparent;
+  transition:all .15s;
+}
+.tslot:active{transform:scale(.95)}
+.tslot.on{
+  background:rgba(201,160,64,.2);
+  border-color:var(--gd);color:var(--gd2);font-weight:700;
+}
+
+/* ════ BOOKING CARD ════ */
+.bcard{
+  background:rgba(255,255,255,.06);
+  border:1.5px solid rgba(255,255,255,.15);
+  border-radius:20px;padding:22px 18px;
+}
+.bcard-title{
+  font-size:.8rem;font-weight:700;
+  color:rgba(255,255,255,.5);
+  letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.brow{margin-bottom:14px}
+.brow label{
+  display:block;font-size:.74rem;
+  color:rgba(255,255,255,.5);font-weight:600;
+  margin-bottom:6px;letter-spacing:.3px;
+}
+.brow input,.brow select,.brow textarea{
+  width:100%;
+  background:rgba(255,255,255,.07);
+  border:1.5px solid rgba(255,255,255,.18);
+  border-radius:10px;padding:11px 14px;
+  color:white;font-size:.86rem;
+  outline:none;font-family:inherit;
+  transition:border-color .2s;
+}
+.brow input:focus,.brow select:focus,.brow textarea:focus{
+  border-color:rgba(201,160,64,.6);
+}
+.brow input::placeholder,.brow textarea::placeholder{color:rgba(255,255,255,.3)}
+.brow select option{background:var(--nv);color:white}
+.brow textarea{resize:vertical;min-height:72px}
+.pprev{
+  display:none;
+  background:rgba(201,160,64,.12);
+  border:1px solid rgba(201,160,64,.25);
+  border-radius:12px;padding:14px;
+  text-align:center;margin-bottom:14px;
+}
+.pprev.on{display:block}
+.pprev-amt{
+  font-family:'Noto Serif KR',serif;
+  font-size:1.5rem;font-weight:700;color:var(--gd2);
+}
+.pprev-lbl{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:4px}
+
+/* ════ STEP BAR ════ */
+.step-bar{display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.sdot{
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+  border:2px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;font-weight:800;flex-shrink:0;
+  transition:all .3s;
+}
+.sdot.on{background:var(--gd);border-color:var(--gd);color:var(--nv)}
+.sdot.done{background:rgba(82,183,136,.25);border-color:var(--gr3);color:var(--gr3)}
+.sline{flex:1;height:2px;background:rgba(255,255,255,.1);margin:0 6px;transition:background .3s}
+.sline.done{background:var(--gr3)}
+.slbls{
+  display:flex;justify-content:space-between;
+  font-size:.62rem;color:rgba(255,255,255,.4);
+  margin-bottom:18px;padding:0 2px;
+}
+.slbls span{text-align:center;width:28px}
+
+/* ════ RESERVE BTN ════ */
+.reserve-btn{
+  width:100%;padding:15px;
+  background:linear-gradient(135deg,var(--gd),#b8891a);
+  color:var(--nv);border:none;border-radius:12px;
+  font-size:.92rem;font-weight:800;
+  cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:6px;transition:all .2s;
+  box-shadow:0 4px 16px rgba(201,160,64,.35);
+}
+.reserve-btn:active{transform:scale(.98)}
+
+/* ════ RES CARD ════ */
+.res-card{
+  margin-top:14px;
+  background:rgba(255,255,255,.07);
+  border:1.5px solid rgba(255,255,255,.2);
+  border-radius:16px;padding:18px;
+}
+.res-card-title{
+  font-size:.78rem;font-weight:800;color:rgba(255,255,255,.65);
+  letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:12px;
+}
+.res-row{
+  display:flex;justify-content:space-between;
+  align-items:flex-start;padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  font-size:.83rem;
+}
+.res-row:last-child{border-bottom:none}
+.res-key{color:rgba(255,255,255,.5)}
+.res-val{color:white;font-weight:600;text-align:right;max-width:60%}
+.res-val.hl{color:var(--gd2);font-family:'Noto Serif KR',serif;font-size:.9rem}
+.kakao-send-btn{
+  width:100%;padding:14px;
+  background:#FEE500;color:#3A1D1D;
+  border:none;border-radius:12px;
+  font-size:.9rem;font-weight:800;
+  cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:14px;transition:all .2s;
+}
+.kakao-send-btn:active{transform:scale(.98)}
+.paste-guide{
+  background:rgba(254,229,0,.08);border:1px solid rgba(254,229,0,.25);
+  border-radius:10px;padding:12px 14px;
+  font-size:.76rem;color:rgba(255,255,255,.7);
+  line-height:1.7;margin-top:10px;display:none;
+}
+.reserve-ok{
+  background:rgba(45,106,79,.2);border:1px solid rgba(82,183,136,.35);
+  border-radius:10px;padding:12px;
+  text-align:center;font-size:.83rem;
+  color:var(--gr3);font-weight:700;
+  margin-top:10px;display:none;
+}
+
+/* ════ PAY BTN ════ */
+.toss-btn{
+  width:100%;padding:14px;
+  background:linear-gradient(135deg,var(--gr),var(--gr2));
+  color:white;border:none;border-radius:12px;
+  font-size:.9rem;font-weight:700;
+  cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:10px;transition:all .2s;
+  box-shadow:0 4px 12px rgba(45,106,79,.3);
+}
+.toss-btn:active{transform:scale(.98)}
+
+/* ════ CONTACT BTNS ════ */
+.kakao-btn,.call-btn{
+  width:100%;padding:14px;
+  border-radius:12px;
+  font-size:.88rem;font-weight:700;
+  cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  text-decoration:none;margin-top:10px;
+  transition:all .2s;
+}
+.kakao-btn{background:rgba(254,229,0,.15);border:1.5px solid rgba(254,229,0,.3);color:#FEE500}
+.kakao-btn:active{transform:scale(.98);background:rgba(254,229,0,.25)}
+.call-btn{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:white}
+.call-btn:active{transform:scale(.98);background:rgba(255,255,255,.18)}
+.bnote{font-size:.7rem;color:rgba(255,255,255,.3);text-align:center;margin-top:14px;line-height:1.6}
+
+/* ════ FOOTER ════ */
+footer{
+  background:#0d1b2e;color:rgba(255,255,255,.4);
+  padding:36px 20px;font-size:.78rem;text-align:center;
+  line-height:1.9;
+}
+.ft-brand{
+  font-family:'Noto Serif KR',serif;
+  color:rgba(255,255,255,.75);font-size:.95rem;font-weight:700;
+  margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.ft-brand span{color:var(--gd2)}
+
+/* ════ BOTTOM NAV ════ */
+.bnav{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  height:calc(56px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.97);backdrop-filter:blur(14px);
+  box-shadow:0 -1px 0 rgba(0,0,0,.06),0 -4px 20px rgba(0,0,0,.06);
+  display:flex;padding-bottom:env(safe-area-inset-bottom);
+}
+.bn{
+  flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:3px;
+  font-size:.6rem;color:var(--muted);text-decoration:none;
+  font-weight:600;letter-spacing:.3px;border:none;
+  background:transparent;cursor:pointer;font-family:inherit;
+  transition:color .2s;padding:6px 0;
+}
+.bn.on{color:var(--gr)}
+.bn-ico{font-size:1.1rem;line-height:1}
+.bn.book{
+  background:linear-gradient(135deg,var(--gd),#b8891a);
+  color:var(--nv);border-radius:0;font-weight:800;
+}
+
+/* ════ OCEAN (NAVY) SECTION ════ */
+.sec.bk{
+  background:linear-gradient(160deg,var(--nv3) 0%,var(--nv) 50%,#1c2e1a 100%);
+}
+
+/* ════ ANIMATION ════ */
+.fi,.fi2,.fi3{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.fi2{transition-delay:.1s}
+.fi3{transition-delay:.2s}
+.fi.vis,.fi2.vis,.fi3.vis{opacity:1;transform:translateY(0)}
+
+/* ════ WAVE DIVIDERS ════ */
+.wdiv{line-height:0;overflow:hidden}
+.wdiv svg{display:block;width:100%}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar t" id="topbar">
+  <a class="tb-logo" href="#">백호<span>시연선생</span></a>
+  <div style="display:flex;align-items:center;gap:0">
+    <a href="https://open.kakao.com/KAKAO_LINK_HERE" target="_blank" class="tb-kakao">💬 카카오 문의</a>
+    <a href="tel:010XXXXXXXX" class="tb-call">📞</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-img-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-body">
+    <div class="h-badge">🐯 명리학 기반 맞춤형 진로·진학 상담</div>
+    <h1>우리 아이의 타고난<br><em>기질과 강점</em>으로<br>진로를 설계합니다</h1>
+    <p class="h-sub">
+      사주팔자에 담긴 아이의 본성을 분석하여<br>
+      딱 맞는 진로·전공·학습 방향을 찾아드립니다
+    </p>
+    <div class="h-btns">
+      <a href="#booking" class="hbtn hbtn-gold">📅 상담 예약하기</a>
+      <a href="#service" class="hbtn hbtn-glass">상담 내용 보기</a>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 40" preserveAspectRatio="none">
+      <path fill="#1a2a4a" d="M0,20 C130,40 260,0 390,20 L390,40 L0,40 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- QUICK STRIP -->
+<div class="qstrip">
+  <div class="qchip gold"><span class="qi">🎉</span>런칭 특가 70,000원</div>
+  <div class="qchip"><span class="qi">📞</span>전화 상담 30~60분</div>
+  <div class="qchip"><span class="qi">🧬</span>기질·성격 분석</div>
+  <div class="qchip"><span class="qi">🎓</span>전공 가이드</div>
+  <div class="qchip"><span class="qi">🗺</span>진로 로드맵</div>
+  <div class="qchip"><span class="qi">📋</span>상담 후 가이드 제공</div>
+</div>
+
+<!-- WAVE -->
+<div class="wdiv" style="background:#1a2a4a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 30" preserveAspectRatio="none"><path fill="#faf8f4" d="M0,15 C130,30 260,0 390,15 L390,30 L0,30 Z"/></svg></div>
+
+<!-- WHY -->
+<section class="sec cr" id="why">
+  <div class="sec-head fi">
+    <div class="slabel">Why 명리학</div>
+    <div class="stitle">왜 명리학 기반<br>진로·진학 상담일까요?</div>
+    <div class="sdiv"></div>
+  </div>
+  <div class="why-grid fi2">
+    <div class="why-card">
+      <div class="why-ico">🧬</div>
+      <h3>타고난 성향과 강점 파악</h3>
+      <p>사주팔자에 담긴 아이의 본성과 기질을 정밀하게 분석합니다</p>
+    </div>
+    <div class="why-card">
+      <div class="why-ico">📐</div>
+      <h3>맞춤형 학습 방향 제시</h3>
+      <p>아이만의 학습 스타일과 집중력 패턴에 맞는 공부법을 안내합니다</p>
+    </div>
+    <div class="why-card">
+      <div class="why-ico">🎯</div>
+      <h3>진로 선택의 명확한 기준</h3>
+      <p>수많은 전공 중 아이에게 유리한 방향을 명확하게 정리해드립니다</p>
+    </div>
+    <div class="why-card">
+      <div class="why-ico">🌱</div>
+      <h3>10년 후를 내다보는 설계</h3>
+      <p>장기적으로 성장하고 행복할 수 있는 진로를 함께 만들어갑니다</p>
+    </div>
+  </div>
+  <div class="why-quote fi3">
+    <div class="why-quote-txt">"우리 아이의 빛나는 미래를 위한 현명한 첫걸음,<br>백호시연선생이 함께하겠습니다."</div>
+    <div class="why-quote-by">— 백호시연선생</div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wdiv" style="background:var(--cr)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 30" preserveAspectRatio="none"><path fill="#f2ede4" d="M0,15 C130,0 260,30 390,15 L390,30 L0,30 Z"/></svg></div>
+
+<!-- SERVICE -->
+<section class="sec cr2" id="service">
+  <div class="sec-head fi">
+    <div class="slabel">Service</div>
+    <div class="stitle">상담 내용</div>
+    <div class="sdiv"></div>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:12px;line-height:1.7">명리학적 분석을 바탕으로 우리 아이에게<br>꼭 맞는 진로 방향을 제시합니다</p>
+  </div>
+  <div class="svc-grid fi2">
+    <div class="svc-card">
+      <div class="svc-ico">📞</div>
+      <h3>전화 상담</h3>
+      <p>30~60분 심층 전화 상담으로 충분히 함께 풀어갑니다</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico">🧬</div>
+      <h3>기질·성격 분석</h3>
+      <p>사주팔자 기반으로 타고난 성격 유형과 학습 스타일을 분석합니다</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico">🎓</div>
+      <h3>전공 가이드</h3>
+      <p>기질과 강점에 맞는 전공 계열과 대학 진학 방향을 안내합니다</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico">🗺</div>
+      <h3>진로 로드맵</h3>
+      <p>지금 해야 할 일부터 대입까지 단계별 맞춤 로드맵을 작성합니다</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-ico">⚠️</div>
+      <h3>주의사항 안내</h3>
+      <p>아이에게 맞지 않는 진로와 피해야 할 선택을 미리 짚어드립니다</p>
+    </div>
+    <div class="svc-card highlight">
+      <div class="svc-ico">📋</div>
+      <h3>맞춤형 상담 가이드 제공</h3>
+      <p>상담 후 내용을 정리한 맞춤형 진로 가이드를 별도 제공합니다. 가족이 함께 참고할 수 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wdiv" style="background:var(--cr2)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 30" preserveAspectRatio="none"><path fill="#faf8f4" d="M0,15 C130,30 260,0 390,15 L390,30 L0,30 Z"/></svg></div>
+
+<!-- PRICING -->
+<section class="sec cr" id="pricing">
+  <div class="sec-head fi">
+    <div class="slabel">Pricing</div>
+    <div class="stitle">상담 비용</div>
+    <div class="sdiv"></div>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:12px">런칭 기념 특별가로 만나보세요!</p>
+  </div>
+  <div class="price-grid fi2">
+    <div class="pcard regular">
+      <div class="pcard-lbl">정상가</div>
+      <div class="pcard-amt">100,000</div>
+      <div class="pcard-unit">원 / 1회</div>
+      <div class="pcard-items">
+        <div class="pcard-item">전화 상담 30~60분</div>
+        <div class="pcard-item">기질·성격 분석</div>
+        <div class="pcard-item">전공 가이드</div>
+        <div class="pcard-item">진로 로드맵</div>
+        <div class="pcard-item">상담 가이드 제공</div>
+      </div>
+    </div>
+    <div class="pcard special">
+      <div class="pcard-lbl">런칭 특가</div>
+      <div class="pcard-amt">70,000</div>
+      <div class="pcard-unit">원 / 1회</div>
+      <div class="pcard-items">
+        <div class="pcard-item">전화 상담 30~60분</div>
+        <div class="pcard-item">기질·성격 분석</div>
+        <div class="pcard-item">전공 가이드</div>
+        <div class="pcard-item">진로 로드맵</div>
+        <div class="pcard-item">상담 가이드 제공</div>
+      </div>
+    </div>
+  </div>
+  <p class="fi3" style="font-size:.75rem;color:var(--muted);text-align:center;line-height:1.7">
+    📌 예약금 30% 선결제 후 상담 진행 · 잔금은 상담 당일 입금<br>
+    노쇼 방지를 위한 사전등록 시스템으로 운영됩니다
+  </p>
+</section>
+
+<!-- WAVE -->
+<div class="wdiv" style="background:var(--cr)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 30" preserveAspectRatio="none"><path fill="#f2ede4" d="M0,15 C130,0 260,30 390,15 L390,30 L0,30 Z"/></svg></div>
+
+<!-- PROCESS -->
+<section class="sec cr2" id="process">
+  <div class="sec-head fi">
+    <div class="slabel">Process</div>
+    <div class="stitle">상담 진행 절차</div>
+    <div class="sdiv"></div>
+  </div>
+  <div class="proc-list fi2">
+    <div class="proc-item">
+      <div class="proc-num">01</div>
+      <div class="proc-body">
+        <h4>📅 사전예약 필수</h4>
+        <p>아래 예약 폼을 통해 원하는 날짜와 시간대를 선택하여 예약합니다</p>
+      </div>
+    </div>
+    <div class="proc-item">
+      <div class="proc-num">02</div>
+      <div class="proc-body">
+        <h4>💬 일정 조율</h4>
+        <p>예약 후 문자·카카오톡으로 상담 가능 여부 및 일정을 조율합니다</p>
+      </div>
+    </div>
+    <div class="proc-item">
+      <div class="proc-num">03</div>
+      <div class="proc-body">
+        <h4>📋 사전등록 (예약금 결제)</h4>
+        <p>일정 확정 후 예약금 30%를 입금합니다 — 노쇼 방지 목적</p>
+      </div>
+    </div>
+    <div class="proc-item">
+      <div class="proc-num">04</div>
+      <div class="proc-body">
+        <h4>📞 전화 상담 진행</h4>
+        <p>맞춰진 시간에 전화 상담을 진행합니다 (30~60분)</p>
+      </div>
+    </div>
+    <div class="proc-item">
+      <div class="proc-num">05</div>
+      <div class="proc-body">
+        <h4>✅ 맞춤 가이드 제공</h4>
+        <p>상담 후 맞춤형 진로 가이드를 별도 제공해 드립니다</p>
+      </div>
+    </div>
+  </div>
+  <div class="proc-notice fi3">
+    <span>🛡️</span>
+    <p>원활한 상담과 상담자 보호를 위해 <strong>사전등록은 필수</strong>입니다.<br>
+    노쇼 방지를 위한 절차이며, 등록된 정보는 상담 목적으로만 사용됩니다.</p>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wdiv" style="background:var(--cr2)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 30" preserveAspectRatio="none"><path fill="#0f1e38" d="M0,15 C130,30 260,0 390,15 L390,30 L0,30 Z"/></svg></div>
+
+<!-- BOOKING -->
+<section class="sec bk" id="booking">
+  <div class="sec-head fi">
+    <div class="slabel">Reservation</div>
+    <div class="stitle" style="color:white">상담 예약</div>
+    <div class="sdiv"></div>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.55);margin-top:10px">희망 날짜와 연락처를 남겨주시면 빠르게 안내해 드립니다</p>
+  </div>
+  <div class="bcard fi2">
+
+    <!-- 예약 캘린더 -->
+    <div id="calBox">
+      <div style="font-size:.7rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">📅 상담 가능 일정 확인</div>
+      <div class="cal-nav-row">
+        <button onclick="calPrev()">‹</button>
+        <span id="calTitle"></span>
+        <button onclick="calNext()">›</button>
+      </div>
+      <div class="cal-days">
+        <span style="color:rgba(255,160,140,.8)">일</span>
+        <span>월</span><span>화</span><span>수</span><span>목</span><span>금</span>
+        <span style="color:rgba(140,200,255,.8)">토</span>
+      </div>
+      <div id="calGrid"></div>
+      <div class="cal-legend">
+        <span class="leg-dot blocked"></span><span>예약중</span>
+        <span class="leg-dot today-d"></span><span>오늘</span>
+        <span class="leg-dot pick"></span><span>선택됨</span>
+      </div>
+      <div id="calMsg"></div>
+    </div>
+
+    <!-- 단계 표시 -->
+    <div class="step-bar">
+      <div class="sdot on" id="sd1">1</div>
+      <div class="sline" id="sl1"></div>
+      <div class="sdot" id="sd2">2</div>
+      <div class="sline" id="sl2"></div>
+      <div class="sdot" id="sd3">3</div>
+    </div>
+    <div class="slbls">
+      <span style="width:52px;margin-left:-12px">정보 입력</span>
+      <span style="width:52px;margin-left:-12px">예약 접수</span>
+      <span style="width:52px;margin-right:-12px">결제 완료</span>
+    </div>
+
+    <div class="bcard-title">📋 예약 정보 입력</div>
+
+    <!-- 희망 날짜 (숨김, 캘린더로 연동) -->
+    <div class="brow">
+      <label>상담 희망일</label>
+      <input type="date" id="bkDate" onchange="onDateChange()" style="color-scheme:dark">
+    </div>
+
+    <!-- 시간대 -->
+    <div class="time-section">
+      <label>희망 시간대</label>
+      <div class="time-grid">
+        <button class="tslot" data-t="오전(10~12시)" onclick="pickTime(this)">🌅 오전<br><small style="font-size:.62rem;opacity:.7">10~12시</small></button>
+        <button class="tslot" data-t="오후(14~17시)" onclick="pickTime(this)">☀️ 오후<br><small style="font-size:.62rem;opacity:.7">14~17시</small></button>
+        <button class="tslot" data-t="저녁(19~21시)" onclick="pickTime(this)">🌙 저녁<br><small style="font-size:.62rem;opacity:.7">19~21시</small></button>
+      </div>
+    </div>
+
+    <!-- 예약금 미리보기 -->
+    <div class="pprev" id="pprev">
+      <div class="pprev-amt" id="pprevAmt"></div>
+      <div class="pprev-lbl" id="pprevLbl"></div>
+    </div>
+
+    <div class="brow">
+      <label>학생 이름</label>
+      <input type="text" id="bkName" placeholder="상담받을 학생 이름">
+    </div>
+    <div class="brow">
+      <label>보호자 연락처</label>
+      <input type="tel" id="bkPhone" placeholder="010-0000-0000">
+    </div>
+    <div class="brow">
+      <label>학생 학년</label>
+      <select id="bkGrade">
+        <option value="">선택해주세요</option>
+        <option>초등 4학년</option>
+        <option>초등 5학년</option>
+        <option>초등 6학년</option>
+        <option>중학교 1학년</option>
+        <option>중학교 2학년</option>
+        <option>중학교 3학년</option>
+        <option>고등학교 1학년</option>
+        <option>고등학교 2학년</option>
+        <option>고등학교 3학년</option>
+        <option>재수생·기타</option>
+      </select>
+    </div>
+    <div class="brow">
+      <label>상담 주제</label>
+      <select id="bkTopic">
+        <option value="">선택해주세요</option>
+        <option>기질·성격 분석</option>
+        <option>진로 설계</option>
+        <option>전공·대학 추천</option>
+        <option>학습 방향 코칭</option>
+        <option>미래 설계</option>
+        <option>종합 상담 (전체)</option>
+      </select>
+    </div>
+    <div class="brow">
+      <label>학생 생년월일 <span style="opacity:.5;font-size:.68rem">(사주 분석용)</span></label>
+      <input type="text" id="bkBirth" placeholder="예: 2008-03-15">
+    </div>
+    <div class="brow">
+      <label>문의사항 (선택)</label>
+      <textarea id="bkMemo" placeholder="특이사항, 궁금한 점 등"></textarea>
+    </div>
+
+    <!-- ① 예약하기 -->
+    <button class="reserve-btn" id="reserveBtn" onclick="handleReserve()">
+      🐯 예약하기
+    </button>
+
+    <!-- 예약 요약 카드 -->
+    <div class="res-card" id="resCard" style="display:none">
+      <div class="res-card-title">✅ 예약 내용 확인</div>
+      <div id="resRows"></div>
+      <button class="kakao-send-btn" id="kakaoSendBtn" onclick="sendReserveKakao()">
+        💬 카카오톡으로 예약 접수하기
+      </button>
+      <div class="paste-guide" id="pasteGuide">
+        📋 예약 정보가 <b>복사</b>되었습니다!<br>
+        카카오 채팅창이 열리면 <b>길게 눌러 붙여넣기</b> 후 전송해 주세요.<br>
+        전송 후 아래 <b>결제하기</b>를 눌러 예약을 완료해 주세요.
+      </div>
+      <div class="reserve-ok" id="reserveOk">✅ 예약 접수 완료! 아래에서 결제해 주세요.</div>
+    </div>
+
+    <!-- ② 결제하기 -->
+    <button class="toss-btn" id="payBtn" onclick="handlePay(event)" style="opacity:.45;pointer-events:none">
+      💰 결제하기 (예약금 30%)
+    </button>
+
+    <!-- 계좌 안내 팝업 -->
+    <div id="payModal" style="display:none;margin-top:14px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:16px;padding:20px 18px;">
+      <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:12px;font-weight:700;letter-spacing:1px">계좌이체 안내</div>
+      <div style="background:rgba(255,255,255,.07);border-radius:12px;padding:16px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:.78rem;color:rgba(255,255,255,.45)">은행</span>
+          <span style="font-size:.9rem;font-weight:700;color:white" id="payBank">은행명</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:.78rem;color:rgba(255,255,255,.45)">계좌번호</span>
+          <span style="font-size:.92rem;font-weight:700;color:var(--gd2);letter-spacing:.5px" id="acctNum">계좌번호</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.78rem;color:rgba(255,255,255,.45)">예금주</span>
+          <span style="font-size:.9rem;font-weight:700;color:white" id="payOwner">예금주</span>
+        </div>
+      </div>
+      <div id="payAmtBox" style="display:none;background:rgba(201,160,64,.1);border:1px solid rgba(201,160,64,.25);border-radius:10px;padding:12px;text-align:center;margin-bottom:12px">
+        <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-bottom:4px">입금 금액 (예약금 30%)</div>
+        <div id="payAmt" style="font-family:'Noto Serif KR',serif;font-size:1.4rem;font-weight:700;color:var(--gd2)"></div>
+      </div>
+      <button onclick="copyAcct()" style="width:100%;padding:12px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:10px;color:white;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit">
+        📋 계좌번호 복사
+      </button>
+      <div id="copyMsg" style="display:none;text-align:center;font-size:.76rem;color:var(--gd2);margin-top:8px">✅ 복사되었습니다!</div>
+    </div>
+
+    <a href="https://open.kakao.com/KAKAO_LINK_HERE" target="_blank" class="kakao-btn">
+      💬 카카오톡으로 문의하기
+    </a>
+    <a href="tel:010XXXXXXXX" class="call-btn">
+      📞 전화로 문의하기
+    </a>
+    <p class="bnote">* 예약하기 → 카카오 접수 → 결제하기 순으로 진행하시면 예약이 확정됩니다</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-brand">🐯 백호<span>시연선생</span></div>
+  명리학 기반 진로·진학 상담<br>
+  런칭 특가 70,000원 (정상가 100,000원) · 전화 상담 30~60분
+</footer>
+
+<!-- BOTTOM NAV -->
+<nav class="bnav">
+  <a class="bn on" href="#hero" data-sec="hero" onclick="navClick(this)">
+    <div class="bn-ico">🏠</div>홈
+  </a>
+  <a class="bn" href="#service" data-sec="service" onclick="navClick(this)">
+    <div class="bn-ico">🧬</div>상담내용
+  </a>
+  <a class="bn book" href="#booking" data-sec="booking" onclick="navClick(this)">
+    <div class="bn-ico">📅</div>예약
+  </a>
+  <a class="bn" href="#pricing" data-sec="pricing" onclick="navClick(this)">
+    <div class="bn-ico">💰</div>요금
+  </a>
+  <a class="bn" href="#process" data-sec="process" onclick="navClick(this)">
+    <div class="bn-ico">📋</div>절차
+  </a>
+</nav>
+
+<script>
+// ── 구글 시트 (확정예약 탭에서 차단 날짜 읽기) ─────────────────
+const SHEET_ID = 'BAEKHO_SHEET_ID_HERE'; // ← 시트 생성 후 ID 입력
+
+// ── 계좌 정보 (나중에 입력) ────────────────────────────────────
+const BANK_NAME  = '은행명';         // ← 예: 카카오뱅크
+const BANK_ACCT  = '계좌번호';       // ← 예: 3333-15-XXXXXXX
+const BANK_OWNER = '예금주';         // ← 예: 홍길동
+
+// ── 상담료 ────────────────────────────────────────────────────
+const CONSULT_FEE = 70000; // 런칭 특가
+
+// ── 캘린더 상태 ───────────────────────────────────────────────
+let _ranges = [], _calY, _calM, _picked = null, _pickedTime = null;
+
+function initCal() {
+  const now = new Date();
+  _calY = now.getFullYear();
+  _calM = now.getMonth();
+  renderCal();
+  if (!SHEET_ID.includes('BAEKHO_SHEET')) {
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent('확정예약')}`;
+    fetch(url)
+      .then(r => r.text())
+      .then(txt => {
+        const json = JSON.parse(txt.replace(/^[^(]+\(/, '').replace(/\);\s*$/, ''));
+        if (json.status !== 'ok' || !json.table || !json.table.rows) return;
+        _ranges = json.table.rows
+          .filter(row => row.c && row.c[0] && row.c[1])
+          .map(row => {
+            const parse = cell => {
+              const v = cell.v;
+              if (typeof v === 'string' && v.startsWith('Date(')) {
+                const p = v.match(/Date\((\d+),(\d+),(\d+)\)/);
+                if (p) return new Date(+p[1], +p[2], +p[3]);
+              }
+              return new Date(v);
+            };
+            return { in: parse(row.c[0]), out: parse(row.c[1]) };
+          })
+          .filter(r => r.in && r.out && !isNaN(r.in) && !isNaN(r.out));
+        renderCal();
+      })
+      .catch(() => {});
+  }
+}
+
+function isBlocked(y, m, d) {
+  const dt = new Date(y, m, d);
+  return _ranges.some(r => dt >= r.in && dt < r.out);
+}
+
+function renderCal() {
+  const MN=['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  document.getElementById('calTitle').textContent = `${_calY}년 ${MN[_calM]}`;
+  const grid = document.getElementById('calGrid');
+  grid.innerHTML = '';
+  const today = new Date(); today.setHours(0,0,0,0);
+  const firstDow = new Date(_calY, _calM, 1).getDay();
+  const dim = new Date(_calY, _calM+1, 0).getDate();
+  for (let i = 0; i < firstDow; i++) {
+    const e = document.createElement('div');
+    e.className = 'cday empty'; grid.appendChild(e);
+  }
+  for (let d = 1; d <= dim; d++) {
+    const el = document.createElement('div');
+    const ds = `${_calY}-${String(_calM+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const dt = new Date(_calY, _calM, d);
+    const dow = dt.getDay();
+    const past = dt < today;
+    const blocked = !past && isBlocked(_calY, _calM, d);
+    const isToday = dt.getTime() === today.getTime();
+    const isPick = _picked === ds;
+    let cls = 'cday';
+    if (past) cls += ' past';
+    else if (blocked) cls += ' blocked';
+    else if (isPick) cls += ' picked avail';
+    else if (isToday) cls += ' today avail';
+    else cls += ' avail';
+    if (!blocked && !past) { if (dow===0) cls+=' sun'; else if (dow===6) cls+=' sat'; }
+    el.className = cls; el.textContent = d;
+    if (!past && !blocked) el.onclick = () => pickCal(ds);
+    grid.appendChild(el);
+  }
+}
+
+function pickCal(ds) {
+  _picked = ds;
+  document.getElementById('bkDate').value = ds;
+  onDateChange();
+  renderCal();
+  setTimeout(() => document.getElementById('bkDate').scrollIntoView({behavior:'smooth', block:'center'}), 200);
+}
+function calPrev() { _calM--; if(_calM<0){_calM=11;_calY--;} renderCal(); }
+function calNext() { _calM++; if(_calM>11){_calM=0;_calY++;} renderCal(); }
+
+function onDateChange() {
+  const d = document.getElementById('bkDate').value;
+  if (!d) return;
+  const deposit = Math.round(CONSULT_FEE * 0.3);
+  document.getElementById('pprevAmt').textContent = CONSULT_FEE.toLocaleString() + '원';
+  document.getElementById('pprevLbl').textContent = '런칭 특가 · 예약금(30%) ' + deposit.toLocaleString() + '원';
+  document.getElementById('pprev').classList.add('on');
+}
+
+function pickTime(btn) {
+  document.querySelectorAll('.tslot').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  _pickedTime = btn.dataset.t;
+}
+
+function handleReserve() {
+  const date  = document.getElementById('bkDate').value;
+  const name  = document.getElementById('bkName').value.trim();
+  const phone = document.getElementById('bkPhone').value.trim();
+  const grade = document.getElementById('bkGrade').value;
+  const topic = document.getElementById('bkTopic').value;
+  if (!date)  { alert('상담 희망일을 선택해 주세요.'); return; }
+  if (!_pickedTime) { alert('희망 시간대를 선택해 주세요.'); return; }
+  if (!name)  { alert('학생 이름을 입력해 주세요.'); return; }
+  if (!phone) { alert('보호자 연락처를 입력해 주세요.'); return; }
+  if (!grade) { alert('학생 학년을 선택해 주세요.'); return; }
+  if (!topic) { alert('상담 주제를 선택해 주세요.'); return; }
+
+  const birth = document.getElementById('bkBirth').value.trim();
+  const memo  = document.getElementById('bkMemo').value.trim();
+  const deposit = Math.round(CONSULT_FEE * 0.3);
+
+  const rows = [
+    {k:'📅 상담 희망일', v:date},
+    {k:'⏰ 희망 시간대', v:_pickedTime},
+    {k:'👤 학생 이름',   v:name},
+    {k:'📱 연락처',     v:phone},
+    {k:'🎓 학년',      v:grade},
+    {k:'📋 상담 주제',  v:topic},
+    {k:'💰 상담료',    v:CONSULT_FEE.toLocaleString()+'원', hl:true},
+    {k:'💳 예약금(30%)',v:deposit.toLocaleString()+'원', hl:true},
+  ];
+  if (birth) rows.push({k:'🗓 생년월일', v:birth});
+  if (memo)  rows.push({k:'📝 문의',    v:memo});
+
+  const box = document.getElementById('resRows');
+  box.innerHTML = rows.map(r =>
+    `<div class="res-row">
+      <span class="res-key">${r.k}</span>
+      <span class="res-val${r.hl?' hl':''}">${r.v}</span>
+    </div>`
+  ).join('');
+
+  window._resTxt =
+    '[백호시연선생 상담 예약]\n\n' +
+    rows.map(r => `${r.k}: ${r.v}`).join('\n');
+
+  document.getElementById('resCard').style.display = 'block';
+  document.getElementById('pasteGuide').style.display = 'none';
+  document.getElementById('reserveOk').style.display = 'none';
+  document.getElementById('resCard').scrollIntoView({behavior:'smooth', block:'nearest'});
+
+  document.getElementById('sd1').classList.remove('on');
+  document.getElementById('sd1').classList.add('done');
+  document.getElementById('sl1').classList.add('done');
+  document.getElementById('sd2').classList.add('on');
+}
+
+function sendReserveKakao() {
+  const txt = window._resTxt || '예약 정보 없음';
+  const open = () => {
+    document.getElementById('pasteGuide').style.display = 'block';
+    document.getElementById('reserveOk').style.display = 'block';
+    document.getElementById('kakaoSendBtn').style.opacity = '.6';
+    const pb = document.getElementById('payBtn');
+    pb.style.opacity = '1'; pb.style.pointerEvents = 'auto';
+    document.getElementById('sd2').classList.remove('on');
+    document.getElementById('sd2').classList.add('done');
+    document.getElementById('sl2').classList.add('done');
+    document.getElementById('sd3').classList.add('on');
+    setTimeout(() => window.open('https://open.kakao.com/KAKAO_LINK_HERE', '_blank'), 300);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt).then(open).catch(open);
+  } else {
+    const el = document.createElement('textarea');
+    el.value = txt; document.body.appendChild(el);
+    el.select(); document.execCommand('copy');
+    document.body.removeChild(el); open();
+  }
+}
+
+function handlePay(e) {
+  e.preventDefault();
+  const modal = document.getElementById('payModal');
+  const isOpen = modal.style.display !== 'none';
+  if (isOpen) { modal.style.display = 'none'; return; }
+  document.getElementById('payBank').textContent  = BANK_NAME;
+  document.getElementById('acctNum').textContent  = BANK_ACCT;
+  document.getElementById('payOwner').textContent = BANK_OWNER;
+  const deposit = Math.round(CONSULT_FEE * 0.3);
+  document.getElementById('payAmt').textContent = deposit.toLocaleString() + '원';
+  document.getElementById('payAmtBox').style.display = 'block';
+  modal.style.display = 'block';
+  setTimeout(() => modal.scrollIntoView({behavior:'smooth', block:'nearest'}), 100);
+}
+
+function copyAcct() {
+  const txt = BANK_ACCT;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt).then(() => showCopy());
+  } else {
+    const el = document.createElement('textarea');
+    el.value = txt; document.body.appendChild(el);
+    el.select(); document.execCommand('copy');
+    document.body.removeChild(el); showCopy();
+  }
+}
+function showCopy() {
+  const msg = document.getElementById('copyMsg');
+  msg.style.display = 'block';
+  setTimeout(() => msg.style.display = 'none', 2000);
+}
+
+// 오늘 이전 날짜 비활성화
+document.getElementById('bkDate').min = new Date().toISOString().split('T')[0];
+
+// 상단바 스크롤
+window.addEventListener('scroll', () => {
+  const tb = document.getElementById('topbar');
+  tb.className = window.scrollY > 60 ? 'topbar s' : 'topbar t';
+  const secs = ['hero','why','service','pricing','process','booking'];
+  let act = 'hero';
+  secs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 80) act = id;
+  });
+  document.querySelectorAll('.bn').forEach(b => {
+    b.classList.toggle('on', b.dataset.sec === act);
+  });
+}, {passive:true});
+
+function navClick(el) {
+  document.querySelectorAll('.bn').forEach(b => b.classList.remove('on'));
+  el.classList.add('on');
+}
+
+// 스크롤 애니메이션
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, {threshold:.1});
+document.querySelectorAll('.fi,.fi2,.fi3').forEach(el => obs.observe(el));
+
+initCal();
+</script>
+</body>
+</html>
