@@ -768,7 +768,7 @@ footer{
     </div>
   </div>
   <p class="fi3" style="font-size:.75rem;color:var(--muted);text-align:center;line-height:1.7">
-    📌 예약금 30% 선결제 후 상담 진행 · 잔금은 상담 당일 입금<br>
+    📌 상담료 70,000원 선결제 후 상담 진행<br>
     노쇼 방지를 위한 사전등록 시스템으로 운영됩니다
   </p>
 </section>
@@ -801,8 +801,8 @@ footer{
     <div class="proc-item">
       <div class="proc-num">03</div>
       <div class="proc-body">
-        <h4>📋 사전등록 (예약금 결제)</h4>
-        <p>일정 확정 후 예약금 30%를 입금합니다 — 노쇼 방지 목적</p>
+        <h4>📋 사전등록 (상담료 결제)</h4>
+        <p>일정 확정 후 상담료 70,000원을 입금합니다 — 노쇼 방지 목적</p>
       </div>
     </div>
     <div class="proc-item">
@@ -967,7 +967,7 @@ footer{
 
     <!-- ② 결제하기 -->
     <button class="toss-btn" id="payBtn" onclick="handlePay(event)" style="opacity:.45;pointer-events:none">
-      💰 결제하기 (예약금 30%)
+      💰 결제하기
     </button>
 
     <!-- 계좌 안내 팝업 -->
@@ -988,7 +988,7 @@ footer{
         </div>
       </div>
       <div id="payAmtBox" style="display:none;background:rgba(201,160,64,.1);border:1px solid rgba(201,160,64,.25);border-radius:10px;padding:12px;text-align:center;margin-bottom:12px">
-        <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-bottom:4px">입금 금액 (예약금 30%)</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-bottom:4px">입금 금액 (런칭 특가)</div>
         <div id="payAmt" style="font-family:'Noto Serif KR',serif;font-size:1.4rem;font-weight:700;color:var(--gd2)"></div>
       </div>
       <button onclick="copyAcct()" style="width:100%;padding:12px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:10px;color:white;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit">
@@ -1132,9 +1132,8 @@ function calNext() { _calM++; if(_calM>11){_calM=0;_calY++;} renderCal(); }
 function onDateChange() {
   const d = document.getElementById('bkDate').value;
   if (!d) return;
-  const deposit = Math.round(CONSULT_FEE * 0.3);
   document.getElementById('pprevAmt').textContent = CONSULT_FEE.toLocaleString() + '원';
-  document.getElementById('pprevLbl').textContent = '런칭 특가 · 예약금(30%) ' + deposit.toLocaleString() + '원';
+  document.getElementById('pprevLbl').textContent = '런칭 할인가 · 상담 당일 결제 없음';
   document.getElementById('pprev').classList.add('on');
 }
 
@@ -1159,7 +1158,6 @@ function handleReserve() {
 
   const birth = document.getElementById('bkBirth').value.trim();
   const memo  = document.getElementById('bkMemo').value.trim();
-  const deposit = Math.round(CONSULT_FEE * 0.3);
 
   const rows = [
     {k:'📅 상담 희망일', v:date},
@@ -1168,8 +1166,7 @@ function handleReserve() {
     {k:'📱 연락처',     v:phone},
     {k:'🎓 학년',      v:grade},
     {k:'📋 상담 주제',  v:topic},
-    {k:'💰 상담료',    v:CONSULT_FEE.toLocaleString()+'원', hl:true},
-    {k:'💳 예약금(30%)',v:deposit.toLocaleString()+'원', hl:true},
+    {k:'💰 상담료',    v:CONSULT_FEE.toLocaleString()+'원 (런칭 특가)', hl:true},
   ];
   if (birth) rows.push({k:'🗓 생년월일', v:birth});
   if (memo)  rows.push({k:'📝 문의',    v:memo});
@@ -1229,8 +1226,7 @@ function handlePay(e) {
   document.getElementById('payBank').textContent  = BANK_NAME;
   document.getElementById('acctNum').textContent  = BANK_ACCT;
   document.getElementById('payOwner').textContent = BANK_OWNER;
-  const deposit = Math.round(CONSULT_FEE * 0.3);
-  document.getElementById('payAmt').textContent = deposit.toLocaleString() + '원';
+  document.getElementById('payAmt').textContent = CONSULT_FEE.toLocaleString() + '원';
   document.getElementById('payAmtBox').style.display = 'block';
   modal.style.display = 'block';
   setTimeout(() => modal.scrollIntoView({behavior:'smooth', block:'nearest'}), 100);
