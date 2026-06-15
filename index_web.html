@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>백호시연선생 — 명리학 기반 진로·진학 상담</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:   #1a2a4a;
+  --navy2:  #253557;
+  --green:  #2d6a4f;
+  --green2: #40916c;
+  --green3: #52b788;
+  --gold:   #c9a040;
+  --gold2:  #e8d08a;
+  --cream:  #faf8f4;
+  --cream2: #f2ede4;
+  --cream3: #ede5d8;
+  --text:   #2c2c2c;
+  --muted:  #7a7a8a;
+  --border: #ddd8ce;
+  --r:      14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(250,248,244,.95);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 40px;display:flex;align-items:center;height:66px;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;
+}
+.nav-logo-icon{
+  width:44px;height:44px;
+  border-radius:50%;overflow:hidden;
+  border:2px solid rgba(26,42,74,.15);
+  flex-shrink:0;
+}
+.nav-logo-icon img{
+  width:300%;height:100%;
+  object-fit:cover;
+  object-position:7% 50%;
+  display:block;
+}
+.nav-logo-text{font-family:'Noto Serif KR',serif;font-size:1.2rem;font-weight:700;color:var(--navy);}
+.nav-logo-sub{font-size:.72rem;color:var(--muted);margin-left:2px;font-weight:400;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;letter-spacing:.3px;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--navy);}
+.nav-cta{
+  margin-left:24px;background:var(--navy);color:white;
+  padding:9px 22px;border-radius:50px;font-size:.84rem;font-weight:600;
+  text-decoration:none;transition:all .2s;
+}
+.nav-cta:hover{background:var(--navy2);transform:translateY(-1px);}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:100px 40px 60px;
+  background:linear-gradient(145deg, #e8f0e9 0%, #f0ebe2 40%, #faf8f4 100%);
+  position:relative;overflow:hidden;
+}
+.hero-leaf{
+  position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+  width:480px;height:480px;opacity:.12;
+  background:radial-gradient(circle, var(--green) 0%, transparent 70%);
+}
+.hero-leaf2{
+  position:absolute;left:-80px;bottom:-80px;
+  width:300px;height:300px;opacity:.08;
+  background:radial-gradient(circle, var(--navy) 0%, transparent 70%);
+}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;width:100%;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(45,106,79,.1);border:1px solid rgba(45,106,79,.25);
+  color:var(--green);font-size:.75rem;font-weight:600;letter-spacing:1.5px;
+  padding:6px 16px;border-radius:20px;margin-bottom:24px;
+}
+.hero-badge::before{content:'🐯';font-size:.9rem;}
+#hero h1{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:700;color:var(--navy);
+  line-height:1.3;letter-spacing:-0.5px;margin-bottom:12px;
+}
+#hero h1 em{color:var(--green);font-style:normal;}
+.hero-desc{
+  font-size:1rem;color:var(--muted);line-height:1.9;
+  margin-bottom:36px;max-width:520px;
+}
+.hero-services{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;
+}
+.hero-service-tag{
+  background:white;border:1px solid var(--border);
+  border-radius:50px;padding:6px 16px;
+  font-size:.8rem;color:var(--navy);font-weight:600;
+  display:flex;align-items:center;gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:14px 32px;border-radius:50px;font-size:.9rem;font-weight:600;letter-spacing:.3px;cursor:pointer;text-decoration:none;transition:all .22s;border:none;font-family:inherit;}
+.btn-primary{background:var(--navy);color:white;}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,42,74,.25);}
+.btn-green{background:var(--green);color:white;}
+.btn-green:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,106,79,.3);}
+.btn-outline{border:2px solid var(--navy);color:var(--navy);background:transparent;}
+.btn-outline:hover{background:var(--navy);color:white;transform:translateY(-2px);}
+
+/* 히어로 우측 카드 */
+.hero-card{
+  background:white;border-radius:24px;
+  box-shadow:0 20px 60px rgba(26,42,74,.12);
+  position:relative;overflow:hidden;
+}
+.hero-card-banner{
+  width:100%;display:block;
+  border-radius:24px 24px 0 0;
+  object-fit:cover;
+  max-height:170px;
+  object-position:center 30%;
+}
+.hero-card-body{padding:24px 28px 28px;}
+.hero-card-logo{
+  font-family:'Noto Serif KR',serif;font-size:1.25rem;font-weight:700;
+  color:var(--navy);display:flex;align-items:center;gap:10px;margin-bottom:6px;
+}
+.hero-card-sub{font-size:.78rem;color:var(--muted);margin-bottom:20px;}
+.hero-card-services{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.hero-card-service{
+  background:var(--cream);border-radius:12px;padding:14px;
+  text-align:center;border:1px solid var(--border);
+}
+.hero-card-service .svc-icon{font-size:1.5rem;margin-bottom:6px;}
+.hero-card-service .svc-name{font-size:.76rem;font-weight:600;color:var(--navy);}
+.hero-card-price{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  border-radius:14px;padding:18px;text-align:center;color:white;
+}
+.price-label{font-size:.72rem;opacity:.7;margin-bottom:4px;}
+.price-original{font-size:.88rem;opacity:.5;text-decoration:line-through;margin-bottom:2px;}
+.price-special{font-size:1.5rem;font-weight:700;color:var(--gold2);}
+.price-badge{
+  display:inline-block;background:rgba(201,160,64,.2);
+  color:var(--gold2);font-size:.68rem;font-weight:600;
+  padding:2px 10px;border-radius:20px;margin-top:4px;border:1px solid rgba(201,160,64,.3);
+}
+
+/* ── SECTION 공통 ── */
+section{padding:90px 40px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.sec-label{font-size:.72rem;letter-spacing:3px;color:var(--green);text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.sec-title{font-family:'Noto Serif KR',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--navy);margin-bottom:10px;}
+.sec-sub{color:var(--muted);font-size:.95rem;margin-bottom:50px;line-height:1.8;}
+.sec-divider{width:40px;height:3px;background:linear-gradient(90deg,var(--green),var(--green3));border-radius:2px;margin:14px 0 44px;}
+
+/* ── WHY 섹션 ── */
+#why{background:var(--cream2);}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.why-card{
+  background:white;border-radius:var(--r);padding:32px;
+  border:1px solid var(--border);
+  display:flex;gap:20px;
+  transition:transform .25s,box-shadow .25s;
+}
+.why-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,42,74,.08);}
+.why-icon{
+  width:52px;height:52px;min-width:52px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+  background:linear-gradient(135deg,rgba(45,106,79,.1),rgba(45,106,79,.05));
+  border:1px solid rgba(45,106,79,.15);
+}
+.why-body h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.why-body p{font-size:.86rem;color:var(--muted);line-height:1.8;}
+.why-quote{
+  margin-top:48px;background:var(--navy);border-radius:20px;
+  padding:36px 40px;display:flex;align-items:center;gap:32px;
+}
+.quote-mark{font-size:4rem;color:var(--gold2);opacity:.4;font-family:Georgia,serif;line-height:1;}
+.quote-text{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:white;line-height:1.8;}
+.quote-author{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:10px;}
+
+/* ── 상담 내용 섹션 ── */
+#service{background:var(--cream);}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px;}
+.service-card{
+  background:white;border-radius:var(--r);padding:28px 24px;
+  border:1px solid var(--border);text-align:center;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,42,74,.1);border-color:var(--green3);}
+.service-card .svc-icon-lg{
+  width:60px;height:60px;border-radius:16px;margin:0 auto 18px;
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;
+  background:linear-gradient(135deg,#e8f5e2,#d4edda);
+}
+.service-card h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.service-card p{font-size:.82rem;color:var(--muted);line-height:1.8;}
+
+/* 가격 카드 */
+.price-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
+  max-width:700px;margin:0 auto;
+}
+.price-card{border-radius:20px;padding:36px;text-align:center;position:relative;overflow:hidden;}
+.price-card.regular{
+  background:white;border:2px solid var(--border);
+}
+.price-card.special{
+  background:linear-gradient(145deg,var(--navy),var(--navy2));
+  color:white;border:none;
+}
+.price-card.special::before{
+  content:'런칭 특가';position:absolute;top:16px;right:-20px;
+  background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:700;
+  padding:4px 32px;transform:rotate(35deg);letter-spacing:1px;
+}
+.price-card-label{font-size:.75rem;font-weight:600;letter-spacing:1px;margin-bottom:14px;}
+.price-card.regular .price-card-label{color:var(--muted);}
+.price-card.special .price-card-label{color:var(--gold2);opacity:.8;}
+.price-amount{font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:6px;}
+.price-card.regular .price-amount{color:var(--muted);text-decoration:line-through;}
+.price-card.special .price-amount{color:var(--gold2);}
+.price-unit{font-size:.85rem;}
+.price-card.regular .price-unit{color:var(--muted);}
+.price-card.special .price-unit{color:rgba(255,255,255,.6);}
+.price-includes{margin-top:18px;display:flex;flex-direction:column;gap:6px;}
+.price-includes-item{
+  font-size:.78rem;display:flex;align-items:center;gap:8px;
+}
+.price-card.regular .price-includes-item{color:var(--muted);}
+.price-card.special .price-includes-item{color:rgba(255,255,255,.75);}
+.price-includes-item::before{content:'✓';font-weight:700;}
+.price-card.regular .price-includes-item::before{color:var(--muted);}
+.price-card.special .price-includes-item::before{color:var(--green3);}
+
+/* ── 상담 절차 섹션 ── */
+#process{background:var(--cream2);}
+.process-steps{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+  position:relative;
+}
+.process-steps::before{
+  content:'';position:absolute;top:36px;left:10%;right:10%;
+  height:2px;background:linear-gradient(90deg,var(--green),var(--green3));
+  z-index:0;
+}
+.step{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:0 12px;position:relative;z-index:1;
+}
+.step-num{
+  width:72px;height:72px;border-radius:50%;
+  background:white;border:3px solid var(--green);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+  box-shadow:0 4px 16px rgba(45,106,79,.15);
+  position:relative;
+}
+.step-num .num{font-size:.7rem;font-weight:700;color:var(--green);position:absolute;top:6px;left:50%;transform:translateX(-50%);}
+.step-num .step-icon{font-size:1.6rem;margin-top:8px;}
+.step h4{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.step p{font-size:.76rem;color:var(--muted);line-height:1.6;}
+.process-notice{
+  margin-top:36px;background:rgba(45,106,79,.06);border:1px solid rgba(45,106,79,.15);
+  border-radius:14px;padding:20px 28px;
+  display:flex;align-items:flex-start;gap:14px;
+}
+.process-notice .notice-icon{font-size:1.3rem;margin-top:1px;}
+.process-notice p{font-size:.84rem;color:var(--text);line-height:1.7;}
+.process-notice strong{color:var(--green);}
+
+/* ── 사주 계산 (접이식) ── */
+#saju{background:var(--cream);}
+.saju-toggle-btn{
+  width:100%;background:white;border:2px solid var(--border);
+  border-radius:var(--r);padding:20px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;font-family:inherit;font-size:.95rem;color:var(--navy);
+  font-weight:600;transition:all .2s;
+}
+.saju-toggle-btn:hover{border-color:var(--green);color:var(--green);}
+.saju-toggle-btn .arrow{transition:transform .3s;font-size:1.1rem;}
+.saju-toggle-btn.open .arrow{transform:rotate(180deg);}
+.saju-content{display:none;margin-top:20px;}
+.saju-content.open{display:block;}
+.saju-layout{display:grid;grid-template-columns:360px 1fr;gap:32px;align-items:start;}
+.saju-form-card{
+  background:white;border:1px solid var(--border);
+  border-radius:var(--r);padding:28px;
+}
+.form-title{font-family:'Noto Serif KR',serif;font-size:1rem;color:var(--navy);margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.form-row{margin-bottom:16px;}
+.form-row label{display:block;font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:6px;}
+.form-row input,.form-row select{
+  width:100%;background:var(--cream);border:1.5px solid var(--border);
+  border-radius:8px;padding:10px 14px;color:var(--text);font-size:.88rem;
+  outline:none;transition:border-color .2s;font-family:inherit;
+}
+.form-row input:focus,.form-row select:focus{border-color:var(--green);}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.gender-btns{display:flex;gap:8px;}
+.gender-btn{
+  flex:1;padding:10px;border:1.5px solid var(--border);
+  border-radius:8px;background:var(--cream);color:var(--muted);
+  font-size:.88rem;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;
+}
+.gender-btn.active{border-color:var(--green);color:var(--green);background:rgba(45,106,79,.06);}
+.no-time{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted);margin-top:6px;cursor:pointer;}
+.no-time input[type=checkbox]{accent-color:var(--green);}
+.calc-btn{
+  width:100%;padding:13px;background:var(--green);color:white;
+  border:none;border-radius:8px;font-size:.92rem;font-weight:700;
+  letter-spacing:1px;cursor:pointer;margin-top:8px;font-family:inherit;transition:all .22s;
+}
+.calc-btn:hover{background:var(--green2);transform:translateY(-1px);}
+
+/* 사주 결과 */
+.result-empty{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:360px;color:var(--muted);text-align:center;
+  border:2px dashed var(--border);border-radius:var(--r);gap:12px;
+  background:white;
+}
+.result-empty .big{font-size:3rem;opacity:.4;}
+.result-box{display:none;}
+.result-box.visible{display:block;}
+.saju-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px;}
+.saju-header h3{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--navy);}
+.lunar-badge{background:rgba(26,42,74,.07);border:1px solid var(--border);color:var(--navy);font-size:.78rem;padding:4px 14px;border-radius:20px;}
+.saju-table{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px;}
+.pillar-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:16px 10px;text-align:center;}
+.pillar-label{font-size:.68rem;color:var(--muted);letter-spacing:1px;margin-bottom:10px;font-weight:600;}
+.pillar-hj{font-size:1.8rem;font-weight:700;letter-spacing:3px;font-family:'Noto Serif KR',serif;line-height:1.2;color:var(--navy);}
+.pillar-kr{font-size:.75rem;color:var(--muted);margin-top:6px;letter-spacing:2px;}
+.pillar-e5{display:flex;justify-content:center;gap:5px;margin-top:8px;}
+.e5-tag{font-size:.65rem;padding:2px 7px;border-radius:8px;font-weight:600;}
+.e5-목{background:#e8f5e9;color:#2e7d32;}
+.e5-화{background:#fff3e0;color:#e65100;}
+.e5-토{background:#fbe9e7;color:#8d5524;}
+.e5-금{background:#eceff1;color:#546e7a;}
+.e5-수{background:#e3f2fd;color:#1565c0;}
+.analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+.analysis-card{background:white;border:1px solid var(--border);border-radius:12px;padding:20px;}
+.analysis-card h4{font-size:.8rem;color:var(--green);font-weight:600;letter-spacing:.5px;margin-bottom:14px;}
+.e5-bars{display:flex;flex-direction:column;gap:9px;}
+.e5-bar-row{display:flex;align-items:center;gap:10px;}
+.e5-bar-label{font-size:.78rem;width:22px;text-align:center;}
+.e5-bar-bg{flex:1;background:#f0f0f0;border-radius:4px;height:9px;overflow:hidden;}
+.e5-bar-fill{height:100%;border-radius:4px;transition:width .6s ease;}
+.e5-bar-count{font-size:.75rem;color:var(--muted);width:18px;text-align:right;}
+.hexchong-list{display:flex;flex-direction:column;gap:8px;}
+.hexchong-item{font-size:.78rem;padding:7px 12px;border-radius:8px;border-left:3px solid;}
+.hexchong-합{background:rgba(45,106,79,.06);border-color:var(--green);}
+.hexchong-충{background:rgba(192,57,43,.06);border-color:#c0392b;}
+.hexchong-천간합{background:rgba(26,42,74,.06);border-color:var(--navy);}
+.hexchong-없음{color:var(--muted);font-size:.8rem;}
+.tab-nav{display:flex;gap:4px;margin-bottom:18px;border-bottom:1px solid var(--border);}
+.tab-btn{
+  padding:9px 16px;font-size:.8rem;color:var(--muted);background:none;
+  border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;
+  transition:all .2s;font-family:inherit;letter-spacing:.3px;
+}
+.tab-btn.active{color:var(--green);border-bottom-color:var(--green);}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+.interp-block{background:white;border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;}
+.interp-block h4{font-family:'Noto Serif KR',serif;font-size:.92rem;color:var(--navy);margin-bottom:8px;}
+.interp-block p{font-size:.84rem;color:var(--text);line-height:1.9;}
+.interp-block .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.itag{font-size:.72rem;padding:3px 10px;border-radius:10px;background:rgba(45,106,79,.07);border:1px solid rgba(45,106,79,.15);color:var(--green);}
+.yongshin-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
+.ys-tag{padding:5px 14px;border-radius:20px;font-size:.76rem;font-weight:600;}
+.ys-main{background:rgba(45,106,79,.1);color:var(--green);border:1px solid rgba(45,106,79,.2);}
+.ys-sub{background:rgba(26,42,74,.07);color:var(--navy);border:1px solid rgba(26,42,74,.15);}
+.ys-avoid{background:rgba(192,57,43,.07);color:#c0392b;border:1px solid rgba(192,57,43,.15);}
+
+/* ── 예약 섹션 ── */
+#booking{background:var(--cream2);}
+.booking-layout{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start;}
+.calendar-card{
+  background:white;border:1px solid var(--border);
+  border-radius:var(--r);padding:28px;
+}
+.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;}
+.cal-month{font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--navy);}
+.cal-nav{
+  background:none;border:1.5px solid var(--border);color:var(--muted);
+  width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;
+  transition:all .2s;display:flex;align-items:center;justify-content:center;
+}
+.cal-nav:hover{border-color:var(--green);color:var(--green);}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.cal-dow{text-align:center;font-size:.68rem;color:var(--muted);padding:6px 0;letter-spacing:.3px;font-weight:600;}
+.cal-dow.sun{color:#e53935;}
+.cal-day{
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  border-radius:8px;font-size:.83rem;cursor:pointer;transition:all .15s;position:relative;
+}
+.cal-day:hover:not(.disabled):not(.empty){background:rgba(45,106,79,.08);color:var(--green);}
+.cal-day.selected{background:var(--navy);color:white;font-weight:700;}
+.cal-day.today{border:1.5px solid var(--green);color:var(--green);}
+.cal-day.disabled{color:#ccc;cursor:not-allowed;}
+.cal-day.empty{cursor:default;}
+.cal-day.has-booking::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--gold);}
+.cal-day.sun-col{color:#e53935;}
+.cal-day.sun-col.disabled{color:rgba(229,57,53,.2);}
+.time-section{margin-top:22px;padding-top:22px;border-top:1px solid var(--border);}
+.time-section h4{font-size:.8rem;color:var(--navy);font-weight:600;letter-spacing:.5px;margin-bottom:12px;}
+.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.time-slot{
+  padding:8px 4px;text-align:center;border:1.5px solid var(--border);
+  border-radius:8px;font-size:.78rem;cursor:pointer;transition:all .15s;color:var(--muted);
+}
+.time-slot:hover:not(.booked){border-color:var(--green);color:var(--green);}
+.time-slot.selected{background:var(--navy);color:white;border-color:var(--navy);font-weight:700;}
+.time-slot.booked{background:#f9f9f9;color:#ccc;cursor:not-allowed;text-decoration:line-through;}
+.no-date-msg{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0;}
+.booking-form-card{
+  background:white;border:1px solid var(--border);
+  border-radius:var(--r);padding:28px;
+}
+.booking-form-card h3{font-family:'Noto Serif KR',serif;font-size:.98rem;color:var(--navy);margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.booking-note{
+  background:rgba(45,106,79,.06);border:1px solid rgba(45,106,79,.15);
+  border-radius:10px;padding:14px;font-size:.78rem;color:var(--text);
+  line-height:1.7;margin-bottom:18px;
+}
+.booking-note strong{color:var(--green);}
+.bform-row{margin-bottom:14px;}
+.bform-row label{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:5px;}
+.bform-row input,.bform-row select,.bform-row textarea{
+  width:100%;background:var(--cream);border:1.5px solid var(--border);
+  border-radius:8px;padding:10px 12px;color:var(--text);font-size:.86rem;
+  outline:none;transition:border-color .2s;font-family:inherit;
+}
+.bform-row input:focus,.bform-row select:focus,.bform-row textarea:focus{border-color:var(--green);}
+.bform-row textarea{resize:vertical;min-height:80px;}
+.reserve-btn{
+  width:100%;padding:14px;background:var(--green);color:white;
+  border:none;border-radius:10px;font-size:.92rem;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:all .22s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.reserve-btn:hover{background:var(--green2);transform:translateY(-1px);}
+.booking-list{margin-top:20px;padding-top:20px;border-top:1px solid var(--border);}
+.booking-list h4{font-size:.8rem;color:var(--navy);font-weight:600;margin-bottom:12px;}
+.booking-item{
+  background:var(--cream);border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;margin-bottom:8px;font-size:.8rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.booking-item-info .b-date{font-weight:600;color:var(--navy);margin-bottom:2px;}
+.booking-item-info .b-name{color:var(--muted);font-size:.76rem;}
+.cancel-btn{
+  background:none;border:1px solid #ffcdd2;color:#e53935;
+  border-radius:6px;padding:3px 10px;font-size:.72rem;cursor:pointer;
+  font-family:inherit;transition:all .15s;
+}
+.cancel-btn:hover{background:#ffebee;}
+.empty-bookings{color:var(--muted);font-size:.82rem;text-align:center;padding:12px 0;}
+
+/* ── CTA 섹션 ── */
+#cta{
+  background:linear-gradient(145deg,var(--navy),var(--navy2));
+  padding:80px 40px;text-align:center;
+}
+#cta h2{font-family:'Noto Serif KR',serif;font-size:clamp(1.5rem,3vw,2rem);color:white;margin-bottom:12px;}
+#cta p{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:36px;line-height:1.8;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:white;color:var(--navy);}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.btn-gold{background:var(--gold);color:var(--navy);}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+
+/* ── FOOTER ── */
+footer{
+  background:#111825;color:rgba(255,255,255,.5);
+  padding:40px 40px;font-size:.8rem;
+}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-brand{
+  font-family:'Noto Serif KR',serif;color:rgba(255,255,255,.8);
+  font-size:.95rem;font-weight:600;margin-bottom:4px;
+  display:flex;align-items:center;gap:10px;
+}
+.footer-tiger{
+  width:36px;height:36px;border-radius:50%;overflow:hidden;
+  border:1.5px solid rgba(255,255,255,.2);flex-shrink:0;
+}
+.footer-tiger img{
+  width:300%;height:100%;
+  object-fit:cover;
+  object-position:7% 50%;
+  display:block;
+}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:rgba(255,255,255,.7);}
+
+
+/* 오늘의 일진 */
+.iljin-bar{
+  background:white;border:1px solid var(--border);border-radius:var(--r);
+  padding:18px 24px;margin-bottom:20px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.iljin-label{font-size:.72rem;letter-spacing:1.5px;color:var(--muted);font-weight:600;}
+.iljin-pillars{display:flex;gap:12px;flex-wrap:wrap;}
+.iljin-pill{
+  display:flex;flex-direction:column;align-items:center;
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:10px;padding:8px 14px;min-width:56px;text-align:center;
+}
+.iljin-pill-lbl{font-size:.62rem;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;}
+.iljin-pill-hj{font-family:'Noto Serif KR',serif;font-size:1.15rem;font-weight:700;color:var(--navy);letter-spacing:2px;}
+.iljin-pill-kr{font-size:.68rem;color:var(--muted);margin-top:2px;}
+
+/* 신살·귀인 */
+.shinsal-grid{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+.shinsal-tag{
+  display:flex;align-items:center;gap:6px;
+  background:rgba(201,160,64,.1);border:1px solid rgba(201,160,64,.25);
+  color:#9b7b1e;border-radius:20px;padding:5px 14px;font-size:.78rem;font-weight:600;
+}
+.shinsal-none{color:var(--muted);font-size:.82rem;}
+.cheonul-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.cheonul-tag{
+  display:flex;align-items:center;gap:5px;
+  border-radius:20px;padding:5px 14px;font-size:.76rem;font-weight:600;
+}
+.cheonul-present{background:rgba(45,106,79,.12);border:1px solid rgba(45,106,79,.3);color:var(--green);}
+.cheonul-absent{background:var(--cream2);border:1px solid var(--border);color:var(--muted);}
+.cheonul-notice{font-size:.8rem;color:var(--green);margin-top:10px;font-weight:600;}
+
+/* ── 진로 리포트 섹션 ── */
+#report{background:var(--cream2);}
+.report-form-card{
+  background:white;border:1px solid var(--border);
+  border-radius:var(--r);padding:32px;
+  max-width:640px;margin:0 auto;
+}
+.report-sec-title{font-size:.8rem;font-weight:700;color:var(--navy);letter-spacing:.5px;margin-bottom:10px;}
+.grade-label-row{display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:8px;}
+.grade-value-display{font-weight:700;color:var(--navy);font-size:1.05rem;}
+#gradeSlider{width:100%;accent-color:var(--green);cursor:pointer;height:6px;}
+.grade-scale{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:4px;}
+.track-btns{display:flex;gap:8px;flex-wrap:wrap;}
+.track-btn{
+  padding:8px 20px;border:1.5px solid var(--border);
+  border-radius:50px;background:var(--cream);color:var(--muted);
+  font-size:.84rem;cursor:pointer;font-family:inherit;transition:all .2s;
+}
+.track-btn.active{border-color:var(--navy);color:var(--navy);background:rgba(26,42,74,.07);font-weight:600;}
+.saju-link-label{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--text);cursor:pointer;}
+.saju-link-label input{accent-color:var(--green);}
+.saju-link-status{font-size:.76rem;color:var(--green);margin-top:5px;font-weight:600;min-height:18px;}
+.report-gen-btn{
+  width:100%;padding:14px;
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  color:white;border:none;border-radius:10px;
+  font-size:.95rem;font-weight:700;cursor:pointer;
+  font-family:inherit;margin-top:24px;transition:all .22s;letter-spacing:.5px;
+}
+.report-gen-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(26,42,74,.25);}
+/* 리포트 출력 */
+.report-output{margin-top:36px;}
+.report-header{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  border-radius:20px 20px 0 0;padding:32px 36px;color:white;
+}
+.report-header-top{display:flex;align-items:center;gap:16px;margin-bottom:18px;}
+.report-logo-circle{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.7rem;flex-shrink:0;
+}
+.report-title-txt{font-family:'Noto Serif KR',serif;font-size:1.15rem;font-weight:700;}
+.report-subtitle-txt{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:2px;}
+.report-meta{display:flex;gap:10px;flex-wrap:wrap;}
+.report-meta-item{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:4px 14px;font-size:.75rem;color:rgba(255,255,255,.85);
+}
+.report-body{background:white;border-radius:0 0 20px 20px;padding:32px 36px;}
+.report-section{margin-bottom:32px;}
+.report-section-hd{
+  display:flex;align-items:center;gap:10px;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:2px solid var(--cream3);
+}
+.report-section-hd h3{font-family:'Noto Serif KR',serif;font-size:.98rem;color:var(--navy);}
+.rsec-badge{
+  font-size:.68rem;background:rgba(45,106,79,.1);color:var(--green);
+  border:1px solid rgba(45,106,79,.2);border-radius:20px;
+  padding:2px 10px;font-weight:600;
+}
+.major-card{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:14px;padding:22px 24px;margin-bottom:12px;
+  transition:transform .2s,box-shadow .2s;
+}
+.major-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,42,74,.08);}
+.major-card-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;}
+.major-name{font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:700;color:var(--navy);}
+.major-desc{font-size:.81rem;color:var(--muted);line-height:1.75;margin-bottom:12px;}
+.me5{font-size:.68rem;padding:3px 10px;border-radius:20px;font-weight:600;flex-shrink:0;}
+.me5-목{background:#e8f5e9;color:#2e7d32;} .me5-화{background:#fff3e0;color:#e65100;}
+.me5-토{background:#fbe9e7;color:#8d5524;} .me5-금{background:#eceff1;color:#546e7a;}
+.me5-수{background:#e3f2fd;color:#1565c0;}
+.univ-list{display:flex;flex-direction:column;gap:6px;}
+.univ-row{
+  display:flex;align-items:center;justify-content:space-between;
+  background:white;border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:.79rem;
+}
+.univ-name{color:var(--navy);font-weight:600;}
+.univ-dept{color:var(--muted);font-size:.72rem;margin-left:6px;}
+.univ-grade{
+  font-size:.76rem;font-weight:700;color:var(--green);
+  background:rgba(45,106,79,.08);padding:2px 10px;border-radius:10px;flex-shrink:0;
+}
+.sub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+.sub-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:16px 18px;}
+.sub-name{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.sub-univs{font-size:.74rem;color:var(--muted);line-height:1.8;}
+.report-footer-note{
+  margin-top:24px;padding:18px 22px;
+  background:rgba(45,106,79,.05);border:1px solid rgba(45,106,79,.15);
+  border-radius:14px;font-size:.8rem;color:var(--text);line-height:1.7;
+}
+.report-footer-note strong{color:var(--green);}
+
+/* ── 반응형 ── */
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  #hero{padding:90px 20px 50px;}
+  .hero-inner{grid-template-columns:1fr;gap:36px;}
+  .hero-card{display:none;}
+  section{padding:60px 20px;}
+  .why-grid{grid-template-columns:1fr;}
+  .service-grid{grid-template-columns:1fr 1fr;}
+  .process-steps{grid-template-columns:1fr 1fr;gap:20px;}
+  .process-steps::before{display:none;}
+  .saju-layout{grid-template-columns:1fr;}
+  .booking-layout{grid-template-columns:1fr;}
+  .price-wrap{grid-template-columns:1fr;}
+  .analysis-grid{grid-template-columns:1fr;}
+  .why-quote{flex-direction:column;gap:16px;padding:24px;}
+  .report-body{padding:24px 20px;}
+  .report-header{padding:24px 20px;}
+  .sub-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">
+      <img src="IMG_5483.PNG" alt="백호시연선생">
+    </div>
+    <div>
+      <div class="nav-logo-text">백호시연선생</div>
+      <div class="nav-logo-sub">명리학 기반 진로·진학 상담</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#why">명리학이란</a>
+    <a href="#service">상담 내용</a>
+    <a href="#process">상담 절차</a>
+    <a href="#saju">사주 확인</a>
+    <a href="#report">진로 리포트</a>
+    <a href="#booking">예약하기</a>
+  </div>
+  <a href="#booking" class="nav-cta">상담 예약</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-leaf"></div>
+  <div class="hero-leaf2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">명리학 기반 맞춤형 진로·진학 상담</div>
+      <h1>우리 아이의 타고난<br><em>기질과 강점</em>으로<br>진로를 설계합니다</h1>
+      <p class="hero-desc">
+        명리학은 타고난 기질과 흐름을 읽어 더 정확한 방향을 제시합니다.<br>
+        사주팔자에 담긴 아이의 본성을 분석하여, 딱 맞는 진로·전공·학습 방향을 찾아드립니다.
+      </p>
+      <div class="hero-services">
+        <div class="hero-service-tag">🔍 기질 분석</div>
+        <div class="hero-service-tag">🗺 진로 설계</div>
+        <div class="hero-service-tag">📖 학습 코칭</div>
+        <div class="hero-service-tag">⭐ 미래 설계</div>
+      </div>
+      <div class="hero-btns">
+        <a href="#booking" class="btn btn-primary">상담 예약하기</a>
+        <a href="#service" class="btn btn-outline">상담 내용 보기</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="IMG_5483.PNG" alt="백호시연선생 — 명리학 기반 진로·진학 상담" class="hero-card-banner">
+      <div class="hero-card-body">
+        <div class="hero-card-services">
+          <div class="hero-card-service">
+            <div class="svc-icon">🔍</div>
+            <div class="svc-name">기질 분석</div>
+          </div>
+          <div class="hero-card-service">
+            <div class="svc-icon">🗺</div>
+            <div class="svc-name">진로 설계</div>
+          </div>
+          <div class="hero-card-service">
+            <div class="svc-icon">📖</div>
+            <div class="svc-name">학습 코칭</div>
+          </div>
+          <div class="hero-card-service">
+            <div class="svc-icon">⭐</div>
+            <div class="svc-name">미래 설계</div>
+          </div>
+        </div>
+        <div class="hero-card-price">
+          <div class="price-label">전화 상담 (30~60분)</div>
+          <div class="price-original">정상가 100,000원</div>
+          <div class="price-special">70,000원</div>
+          <div class="price-badge">🎉 런칭 기념 특별가</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY 명리학 ══ -->
+<section id="why">
+  <div class="section-inner">
+    <div class="sec-label">Why 명리학</div>
+    <h2 class="sec-title">왜 명리학 기반 진로·진학 상담일까요?</h2>
+    <p class="sec-sub">명리학은 타고난 기질과 흐름을 읽어 더 정확한 진로 방향을 제시합니다.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🧬</div>
+        <div class="why-body">
+          <h3>타고난 성향과 강점을 정확히 파악</h3>
+          <p>사주팔자에 담긴 아이의 본성과 타고난 기질을 분석하여, 어떤 환경에서 능력이 발휘되는지 정확하게 파악합니다. 일반 심리검사로는 알기 어려운 깊은 성향까지 짚어냅니다.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📐</div>
+        <div class="why-body">
+          <h3>학생에게 맞는 학습 방향 제시</h3>
+          <p>아이마다 다른 학습 스타일과 집중력 패턴이 있습니다. 사주 분석을 통해 언제, 어떻게 공부해야 효과가 극대화되는지, 어떤 과목에서 잠재력이 빛나는지 가이드합니다.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <div class="why-body">
+          <h3>진로 선택의 명확한 기준 제공</h3>
+          <p>수많은 전공과 직업 중 막막하게 느껴지는 선택을. 명리학적 분석을 통해 아이에게 유리한 전공 계열, 적합한 직업군, 피해야 할 방향까지 명확한 기준으로 정리해드립니다.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌱</div>
+        <div class="why-body">
+          <h3>미래를 준비하는 현명한 선택</h3>
+          <p>단순한 현재 성적이나 유행 직업이 아닌, 아이가 장기적으로 성장하고 행복할 수 있는 방향을 제시합니다. 10년, 20년 후를 내다보는 진로 설계를 함께 만들어갑니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-quote">
+      <div class="quote-mark">"</div>
+      <div>
+        <div class="quote-text">우리 아이의 빛나는 미래를 위한 현명한 첫걸음,<br>백호시연선생이 함께하겠습니다.</div>
+        <div class="quote-author">— 백호시연선생</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 상담 내용 ══ -->
+<section id="service">
+  <div class="section-inner">
+    <div class="sec-label">Service</div>
+    <h2 class="sec-title">상담 내용</h2>
+    <p class="sec-sub">명리학적 분석을 바탕으로 우리 아이에게 꼭 맞는 진로 방향을 제시합니다.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="svc-icon-lg">📞</div>
+        <h3>전화 상담</h3>
+        <p>30~60분 심층 전화 상담으로 충분한 시간을 가지고 아이의 진로 고민을 함께 풀어갑니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-lg">🧬</div>
+        <h3>학생 기질분석 · 성격 분석</h3>
+        <p>사주팔자를 기반으로 아이의 타고난 기질, 성격 유형, 학습 스타일을 정밀하게 분석합니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-lg">🎓</div>
+        <h3>유리하고 적합한 전공 가이드</h3>
+        <p>아이의 기질과 강점에 맞는 전공 계열을 추천하고, 대학 진학 방향을 구체적으로 안내합니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-lg">🗺</div>
+        <h3>맞춤형 진로 로드맵 제시</h3>
+        <p>지금 해야 할 일부터 대입 준비, 전공 선택까지 단계별 맞춤 로드맵을 작성해드립니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon-lg">⚠️</div>
+        <h3>진로 선택 시 주의점 안내</h3>
+        <p>아이에게 맞지 않는 진로, 피해야 할 선택들을 명리학적 관점에서 미리 짚어드립니다.</p>
+      </div>
+      <div class="service-card" style="background:linear-gradient(145deg,#f0f7f2,#e8f5e9);border-color:rgba(45,106,79,.2);">
+        <div class="svc-icon-lg" style="background:linear-gradient(135deg,#c8e6c9,#a5d6a7);">📋</div>
+        <h3>상담 후 맞춤형 가이드 제공</h3>
+        <p>상담 내용을 정리한 맞춤형 진로 가이드를 상담 후 제공합니다. 가족이 함께 참고할 수 있습니다.</p>
+      </div>
+    </div>
+
+    <!-- 가격 -->
+    <div style="text-align:center;margin-bottom:28px;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.2rem;color:var(--navy);margin-bottom:8px;">상담 비용</h3>
+      <p style="font-size:.85rem;color:var(--muted);">런칭 기념 특별가로 만나보세요!</p>
+    </div>
+    <div class="price-wrap">
+      <div class="price-card regular">
+        <div class="price-card-label">정상가</div>
+        <div class="price-amount">100,000<span class="price-unit">원</span></div>
+        <div class="price-includes">
+          <div class="price-includes-item">전화 상담 30~60분</div>
+          <div class="price-includes-item">기질·성격 분석</div>
+          <div class="price-includes-item">전공 가이드</div>
+          <div class="price-includes-item">진로 로드맵 제시</div>
+          <div class="price-includes-item">상담 후 가이드 제공</div>
+        </div>
+      </div>
+      <div class="price-card special">
+        <div class="price-card-label">런칭 특가</div>
+        <div class="price-amount">70,000<span class="price-unit">원</span></div>
+        <div class="price-includes">
+          <div class="price-includes-item">전화 상담 30~60분</div>
+          <div class="price-includes-item">기질·성격 분석</div>
+          <div class="price-includes-item">전공 가이드</div>
+          <div class="price-includes-item">진로 로드맵 제시</div>
+          <div class="price-includes-item">상담 후 가이드 제공</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 상담 절차 ══ -->
+<section id="process">
+  <div class="section-inner">
+    <div class="sec-label">Process</div>
+    <h2 class="sec-title">상담 진행 절차</h2>
+    <p class="sec-sub">5단계 체계적인 절차로 신뢰할 수 있는 상담을 제공합니다.</p>
+
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">
+          <span class="num">01</span>
+          <span class="step-icon">📅</span>
+        </div>
+        <h4>사전예약 필수</h4>
+        <p>아래 예약 폼을 통해 원하는 날짜와 시간을 선택하여 예약합니다</p>
+      </div>
+      <div class="step">
+        <div class="step-num">
+          <span class="num">02</span>
+          <span class="step-icon">💬</span>
+        </div>
+        <h4>일정 조율</h4>
+        <p>예약 후 문자/카카오톡으로 상담 가능 여부 및 일정을 조율합니다</p>
+      </div>
+      <div class="step">
+        <div class="step-num">
+          <span class="num">03</span>
+          <span class="step-icon">📋</span>
+        </div>
+        <h4>사전등록 필수</h4>
+        <p>일정 확정 후 사전등록 절차를 진행합니다 <small>(노쇼 방지)</small></p>
+      </div>
+      <div class="step">
+        <div class="step-num">
+          <span class="num">04</span>
+          <span class="step-icon">📞</span>
+        </div>
+        <h4>전화 상담 진행</h4>
+        <p>맞춰진 시간에 전화 상담을 진행합니다 (30~60분)</p>
+      </div>
+      <div class="step">
+        <div class="step-num">
+          <span class="num">05</span>
+          <span class="step-icon">✅</span>
+        </div>
+        <h4>가이드 제공</h4>
+        <p>상담 후 맞춤형 진로 가이드를 제공해 드립니다</p>
+      </div>
+    </div>
+
+    <div class="process-notice">
+      <div class="notice-icon">🛡️</div>
+      <p>원활한 상담과 상담자 보호를 위해 <strong>사전등록은 필수</strong>입니다.<br>
+         노쇼 방지를 위한 절차이며, 등록된 정보는 상담 목적으로만 사용됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 사주 확인 (선택) ══ -->
+<section id="saju">
+  <div class="section-inner">
+    <div class="sec-label">Destiny Chart</div>
+    <h2 class="sec-title">사주팔자 미리 확인하기</h2>
+    <p class="sec-sub">상담 전 아이의 사주팔자를 미리 확인해 보세요. 상담 시 더욱 깊이 있는 분석이 가능합니다.</p>
+
+    <!-- 오늘의 일진 -->
+    <div class="iljin-bar" id="iljinBar"></div>
+
+    <button class="saju-toggle-btn" id="sajuToggleBtn" onclick="toggleSaju()">
+      <span>🔮 사주팔자 계산기 열기 (클릭하여 펼치기)</span>
+      <span class="arrow">▼</span>
+    </button>
+
+    <div class="saju-content" id="sajuContent">
+      <div class="saju-layout">
+        <!-- 입력 폼 -->
+        <div class="saju-form-card">
+          <div class="form-title">🐯 사주 정보 입력</div>
+          <div class="form-row">
+            <label>이름</label>
+            <input type="text" id="nameInput" placeholder="이름 입력">
+          </div>
+          <div class="form-row">
+            <label>생년월일</label>
+            <div class="form-row-3">
+              <input type="number" id="byear" placeholder="년도" min="1900" max="2030">
+              <input type="number" id="bmonth" placeholder="월" min="1" max="12">
+              <input type="number" id="bday" placeholder="일" min="1" max="31">
+            </div>
+          </div>
+          <div class="form-row">
+            <label>성별</label>
+            <div class="gender-btns">
+              <button class="gender-btn active" id="gMale" onclick="setGender('male')">남성</button>
+              <button class="gender-btn" id="gFemale" onclick="setGender('female')">여성</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <label>태어난 시</label>
+            <div class="form-row-2">
+              <input type="number" id="bhour" placeholder="시 (0~23)">
+              <input type="number" id="bmin" placeholder="분 (0~59)">
+            </div>
+            <label class="no-time">
+              <input type="checkbox" id="noTime" onchange="toggleNoTime()">
+              태어난 시를 모릅니다
+            </label>
+          </div>
+          <button class="calc-btn" onclick="calcSaju()">사주팔자 계산하기</button>
+        </div>
+
+        <!-- 결과 -->
+        <div>
+          <div class="result-empty" id="resultEmpty">
+            <div class="big">☯</div>
+            <div style="font-weight:600;color:var(--navy)">사주 정보를 입력하세요</div>
+            <div style="font-size:.82rem">생년월일을 입력하면 사주팔자가 계산됩니다</div>
+          </div>
+          <div class="result-box" id="resultBox">
+            <div class="saju-header">
+              <h3 id="resultName">사주팔자 분석결과</h3>
+              <span class="lunar-badge" id="lunarDate"></span>
+            </div>
+            <div class="saju-table" id="sajuTable"></div>
+            <div class="analysis-grid">
+              <div class="analysis-card">
+                <h4>오행 분포</h4>
+                <div class="e5-bars" id="e5Bars"></div>
+              </div>
+              <div class="analysis-card">
+                <h4>합충 분석</h4>
+                <div class="hexchong-list" id="hexChongList"></div>
+              </div>
+            </div>
+            <div class="tab-nav">
+              <button class="tab-btn active" onclick="showTab('total')">종합 해석</button>
+              <button class="tab-btn" onclick="showTab('saju')">사주 분석</button>
+              <button class="tab-btn" onclick="showTab('e5')">오행 분석</button>
+              <button class="tab-btn" onclick="showTab('career')">적성·진로</button>
+              <button class="tab-btn" onclick="showTab('shinsal')">신살·귀인</button>
+            </div>
+            <div id="tab-total" class="tab-content active"></div>
+            <div id="tab-saju" class="tab-content"></div>
+            <div id="tab-e5" class="tab-content"></div>
+            <div id="tab-career" class="tab-content"></div>
+            <div id="tab-shinsal" class="tab-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ══ 예약하기 ══ -->
+<section id="booking">
+  <div class="section-inner">
+    <div class="sec-label">Reservation</div>
+    <h2 class="sec-title">상담 예약하기</h2>
+    <p class="sec-sub">원하시는 날짜와 시간을 선택하고 예약 정보를 입력해 주세요.</p>
+
+    <div class="booking-layout">
+      <!-- 달력 -->
+      <div class="calendar-card">
+        <div class="cal-header">
+          <button class="cal-nav" onclick="prevMonth()">‹</button>
+          <span class="cal-month" id="calMonth"></span>
+          <button class="cal-nav" onclick="nextMonth()">›</button>
+        </div>
+        <div class="cal-grid">
+          <div class="cal-dow sun">일</div>
+          <div class="cal-dow">월</div>
+          <div class="cal-dow">화</div>
+          <div class="cal-dow">수</div>
+          <div class="cal-dow">목</div>
+          <div class="cal-dow">금</div>
+          <div class="cal-dow">토</div>
+        </div>
+        <div class="cal-grid" id="calDays"></div>
+        <div class="time-section">
+          <h4>시간 선택</h4>
+          <div id="timeArea">
+            <div class="no-date-msg">날짜를 먼저 선택해 주세요</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 예약 폼 -->
+      <div class="booking-form-card">
+        <h3>예약 정보 입력</h3>
+        <div class="booking-note">
+          <strong>📌 사전등록 안내</strong><br>
+          원활한 상담을 위해 사전등록은 필수입니다. 등록하신 정보는 상담 목적으로만 사용됩니다.
+        </div>
+        <div class="bform-row">
+          <label>예약 날짜 · 시간</label>
+          <input type="text" id="selectedDateTime" readonly placeholder="달력에서 날짜/시간 선택" style="background:var(--cream2);">
+        </div>
+        <div class="bform-row">
+          <label>학부모 이름</label>
+          <input type="text" id="bkName" placeholder="예) 김○○ 어머니">
+        </div>
+        <div class="bform-row">
+          <label>연락처 (전화번호)</label>
+          <input type="tel" id="bkPhone" placeholder="010-0000-0000">
+        </div>
+        <div class="bform-row">
+          <label>학생 이름 · 학년</label>
+          <input type="text" id="bkStudent" placeholder="예) 이○○ (고2)">
+        </div>
+        <div class="bform-row">
+          <label>학생 생년월일</label>
+          <input type="text" id="bkBirth" placeholder="예) 2007.05.12">
+        </div>
+        <div class="bform-row">
+          <label>상담 희망 내용 (선택)</label>
+          <textarea id="bkMemo" placeholder="진로 고민, 전공 방향, 특이사항 등 자유롭게 입력해 주세요"></textarea>
+        </div>
+        <button class="reserve-btn" onclick="makeReservation()">
+          📅 예약 확정하기
+        </button>
+
+        <div class="booking-list">
+          <h4>예약 내역</h4>
+          <div id="bookingList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 상담 결과물 샘플 ══ -->
+<section id="sample-report" style="background:#f5f3ef;padding:80px 0">
+  <div class="section-inner">
+    <div class="sec-label">Sample Report</div>
+    <h2 class="sec-title">상담 결과물 미리보기</h2>
+    <p class="sec-sub">실제 상담 후 제공되는 맞춤형 명리 보고서 샘플입니다<br>
+      <span style="font-size:.8rem;color:#b0a89a">※ 개인정보 보호를 위해 성명 등은 블러 처리되었습니다</span></p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px">
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.13);position:relative">
+        <img src="report_imgs/sample_1.jpg" alt="보고서 샘플 - 표지" style="width:100%;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,transparent 100%)">
+          <span style="color:white;font-size:.78rem;font-weight:600">📄 표지 · 분석 주제</span>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.13);position:relative">
+        <img src="report_imgs/sample_3.jpg" alt="보고서 샘플 - 사주 배치도" style="width:100%;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,transparent 100%)">
+          <span style="color:white;font-size:.78rem;font-weight:600">📊 사주 오행 배치도</span>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.13);position:relative">
+        <img src="report_imgs/sample_5.jpg" alt="보고서 샘플 - 학습 포텐셜" style="width:100%;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,transparent 100%)">
+          <span style="color:white;font-size:.78rem;font-weight:600">✨ 학습 포텐셜 분석</span>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.13);position:relative">
+        <img src="report_imgs/sample_7.jpg" alt="보고서 샘플 - 실행 방안" style="width:100%;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,transparent 100%)">
+          <span style="color:white;font-size:.78rem;font-weight:600">🎯 맞춤 실행 방안</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;padding:20px 24px;background:rgba(201,160,64,.1);border-radius:12px;border-left:4px solid #c9a040">
+      <p style="font-size:.88rem;color:#2c2c2c;line-height:1.8">
+        <strong>상담 후 보고서는 별도 제공 여부를 상담 시 안내해 드립니다.</strong><br>
+        개인 사주에 기반한 맞춤형 분석 내용이 포함됩니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 맞춤 진로 리포트 ══ -->
+<section id="report">
+  <div class="section-inner">
+    <div class="sec-label">Career Report</div>
+    <h2 class="sec-title">맞춤형 진로 리포트</h2>
+    <p class="sec-sub">사주팔자와 학업 등급을 입력하면 2026~2027 수시 입시 데이터 기반으로 최적의 전공을 추천해 드립니다.</p>
+
+    <div class="report-form-card">
+      <!-- ① 학업 등급 -->
+      <div class="report-sec-title">📊 학업 등급 입력</div>
+      <div style="margin-bottom:20px">
+        <div class="grade-label-row">
+          <span style="font-size:.85rem;color:var(--muted)">내신 평균 등급</span>
+          <span class="grade-value-display" id="gradeDisplay">3.0 등급</span>
+        </div>
+        <input type="range" min="1.0" max="9.0" step="0.1" value="3.0"
+               id="gradeSlider" oninput="updateGradeDisplay(this.value)">
+        <div class="grade-scale">
+          <span>1등급</span><span>2등급</span><span>4등급</span><span>6등급</span><span>9등급</span>
+        </div>
+      </div>
+
+      <!-- ② 계열 선택 -->
+      <div class="report-sec-title">🎓 계열 선택</div>
+      <div class="track-btns" style="margin-bottom:20px">
+        <button class="track-btn active" id="track-all" onclick="setTrack('all')">계열 무관</button>
+        <button class="track-btn" id="track-1" onclick="setTrack('1')">인문·사회</button>
+        <button class="track-btn" id="track-2" onclick="setTrack('2')">이공·자연</button>
+        <button class="track-btn" id="track-3" onclick="setTrack('3')">예체능</button>
+      </div>
+
+      <!-- ③ 사주 연동 -->
+      <div class="report-sec-title">☯ 사주 정보</div>
+      <div style="margin-bottom:6px">
+        <label class="saju-link-label">
+          <input type="checkbox" id="useSaju" onchange="toggleSajuLink()">
+          위 사주 계산기 결과 연동하기
+        </label>
+        <div class="saju-link-status" id="sajuLinkStatus"></div>
+      </div>
+      <div id="reportSajuInputs">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px">
+          <div>
+            <label style="display:block;font-size:.74rem;color:var(--muted);font-weight:600;margin-bottom:4px">태어난 년도</label>
+            <input type="number" id="rByear" placeholder="예) 2008" min="1900" max="2030"
+              style="width:100%;background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.85rem;outline:none;font-family:inherit;transition:border-color .2s"
+              onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:.74rem;color:var(--muted);font-weight:600;margin-bottom:4px">월</label>
+            <input type="number" id="rBmonth" placeholder="1~12" min="1" max="12"
+              style="width:100%;background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.85rem;outline:none;font-family:inherit;transition:border-color .2s"
+              onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div>
+            <label style="display:block;font-size:.74rem;color:var(--muted);font-weight:600;margin-bottom:4px">일</label>
+            <input type="number" id="rBday" placeholder="1~31" min="1" max="31"
+              style="width:100%;background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;font-size:.85rem;outline:none;font-family:inherit;transition:border-color .2s"
+              onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="rGMale" onclick="setRGender('male')"
+            style="flex:1;padding:9px;border:1.5px solid var(--navy);border-radius:8px;background:rgba(26,42,74,.07);color:var(--navy);font-size:.85rem;cursor:pointer;font-family:inherit;font-weight:600">남성</button>
+          <button id="rGFemale" onclick="setRGender('female')"
+            style="flex:1;padding:9px;border:1.5px solid var(--border);border-radius:8px;background:var(--cream);color:var(--muted);font-size:.85rem;cursor:pointer;font-family:inherit">여성</button>
+        </div>
+      </div>
+
+      <button class="report-gen-btn" onclick="generateReport()">
+        📋 맞춤 진로 리포트 생성하기
+      </button>
+    </div>
+
+    <!-- 리포트 출력 영역 -->
+    <div id="reportOutput" class="report-output" style="display:none"></div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section id="cta">
+  <h2>우리 아이의 진로, 지금 시작하세요</h2>
+  <p>
+    명리학 기반 맞춤형 진로·진학 상담으로<br>
+    아이의 빛나는 미래를 함께 설계합니다.
+  </p>
+  <div class="cta-btns">
+    <a href="#booking" class="btn btn-gold">지금 예약하기 →</a>
+    <a href="#service" class="btn btn-white">상담 내용 보기</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <div class="footer-tiger"><img src="IMG_5483.PNG" alt="백호"></div>
+        백호시연선생
+      </div>
+      <div>명리학 기반 진로·진학 상담 · 상담 문의: 예약 폼을 통해 연락 주세요</div>
+    </div>
+    <div class="footer-links">
+      <a href="#why">명리학이란</a>
+      <a href="#service">상담 내용</a>
+      <a href="#process">상담 절차</a>
+      <a href="#booking">예약하기</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lunisolar@2.6.0/dist/lunisolar.min.js"></script>
+<script src="admission-db.js"></script>
+<script>
+// ══════════════════════════════════
+//  사주팔자 계산기
+// ══════════════════════════════════
+let selectedGender = 'male';
+function setGender(g) {
+  selectedGender = g;
+  document.getElementById('gMale').classList.toggle('active', g === 'male');
+  document.getElementById('gFemale').classList.toggle('active', g === 'female');
+}
+function toggleNoTime() {
+  const nt = document.getElementById('noTime').checked;
+  document.getElementById('bhour').disabled = nt;
+  document.getElementById('bmin').disabled  = nt;
+  if (nt) { document.getElementById('bhour').value = ''; document.getElementById('bmin').value = ''; }
+}
+function toggleSaju() {
+  const btn = document.getElementById('sajuToggleBtn');
+  const content = document.getElementById('sajuContent');
+  btn.classList.toggle('open');
+  content.classList.toggle('open');
+  btn.querySelector('span:first-child').textContent =
+    content.classList.contains('open')
+      ? '🔮 사주팔자 계산기 닫기'
+      : '🔮 사주팔자 계산기 열기 (클릭하여 펼치기)';
+}
+
+// ══ 만세력: 천을귀인 · 신살 ══
+const CHEONUL_MAP = {
+  갑:['축','미'], 무:['축','미'], 경:['축','미'],
+  을:['자','신'], 기:['자','신'],
+  병:['해','유'], 정:['해','유'],
+  임:['묘','사'], 계:['묘','사'],
+  신:['오','인']
+};
+const YANGИН_MAP = { 갑:'묘', 병:'오', 무:'오', 경:'유', 임:'자', 을:'진', 정:'미', 기:'미', 신:'술', 계:'축' };
+const SAMHAP = {
+  인:'인오술', 오:'인오술', 술:'인오술',
+  사:'사유축', 유:'사유축', 축:'사유축',
+  신:'신자진', 자:'신자진', 진:'신자진',
+  해:'해묘미', 묘:'해묘미', 미:'해묘미'
+};
+const DOHWA  = {'인오술':'묘','사유축':'자','신자진':'유','해묘미':'오'};
+const YEOKMA = {'인오술':'신','사유축':'해','신자진':'인','해묘미':'사'};
+const HWAGAE = {'인오술':'술','사유축':'축','신자진':'진','해묘미':'미'};
+
+function findCheonul(pillars) {
+  const dayCG = pillars[2].cg;
+  const list = CHEONUL_MAP[dayCG] || [];
+  const allJJ = pillars.map(p => p.jj);
+  return { list, present: list.filter(j => allJJ.includes(j)) };
+}
+function findYangin(pillars) {
+  const dayCG = pillars[2].cg;
+  const target = YANGИН_MAP[dayCG];
+  const present = pillars.some(p => p.jj === target);
+  return { target, present };
+}
+function calcShinsal(pillars) {
+  const results = [];
+  const yearJJ = pillars[0].jj;
+  const group = SAMHAP[yearJJ];
+  if (!group) return results;
+  const allJJ = pillars.map(p => p.jj);
+  if (allJJ.includes(DOHWA[group]))  results.push({ name:'도화살', emoji:'🌸', desc:'매력과 예술적 감각이 뛰어나며 대인관계에 강함' });
+  if (allJJ.includes(YEOKMA[group])) results.push({ name:'역마살', emoji:'🐎', desc:'활동적이고 변화를 즐기며 해외·이동 운이 강함' });
+  if (allJJ.includes(HWAGAE[group])) results.push({ name:'화개살', emoji:'🔮', desc:'학문·예술·종교 분야에 두드러진 재능을 가짐' });
+  return results;
+}
+
+const CHEONGAN = ['갑','을','병','정','무','기','경','신','임','계'];
+const JIJI     = ['자','축','인','묘','진','사','오','미','신','유','술','해'];
+const CG_HJ    = ['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
+const JJ_HJ    = ['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
+const E5_MAP   = {갑:'목',을:'목',병:'화',정:'화',무:'토',기:'토',경:'금',신:'금',임:'수',계:'수',자:'수',축:'토',인:'목',묘:'목',진:'토',사:'화',오:'화',미:'토',신:'금',유:'금',술:'토',해:'수'};
+const E5_COLOR = {목:'e5-목',화:'e5-화',토:'e5-토',금:'e5-금',수:'e5-수'};
+const E5_BAR   = {목:'#4CAF50',화:'#FF7043',토:'#A1887F',금:'#90A4AE',수:'#42A5F5'};
+
+function getStemBranch(n, total) {
+  return { cg: CHEONGAN[n % 10], jj: JIJI[n % 12], cgHJ: CG_HJ[n % 10], jjHJ: JJ_HJ[n % 12] };
+}
+function getYearPillar(year) { const n = year - 4; return getStemBranch(n, 60); }
+function getMonthPillar(year, month) {
+  const base = (year - 4) * 12 + (month - 1);
+  return getStemBranch(base, 60);
+}
+function getDayPillar(year, month, day) {
+  const d = new Date(year, month - 1, day);
+  const base = Math.floor((d.getTime() - new Date(1900, 0, 31).getTime()) / 86400000) + 20;
+  return getStemBranch(base, 60);
+}
+function getHourPillar(dayCg, hour) {
+  const jiIdx = Math.floor((hour + 1) / 2) % 12;
+  const cgIdx = (CHEONGAN.indexOf(dayCg) % 5) * 2 + Math.floor((jiIdx) % 2 === 0 ? jiIdx / 2 : (jiIdx - 1) / 2);
+  return { cg: CHEONGAN[(CHEONGAN.indexOf(dayCg) % 5) * 2 + Math.floor(jiIdx / 2) % 10 % 10], jj: JIJI[jiIdx], cgHJ: CG_HJ[(CHEONGAN.indexOf(dayCg) % 5) * 2 + Math.floor(jiIdx / 2) % 10 % 10], jjHJ: JJ_HJ[jiIdx] };
+}
+
+function calcE5(pillars) {
+  const counts = {목:0,화:0,토:0,금:0,수:0};
+  pillars.forEach(p => {
+    if (E5_MAP[p.cg]) counts[E5_MAP[p.cg]]++;
+    if (E5_MAP[p.jj]) counts[E5_MAP[p.jj]]++;
+  });
+  return counts;
+}
+function getYongshin(e5) {
+  const sorted = Object.entries(e5).sort((a,b)=>b[1]-a[1]);
+  return { main: sorted[0][0], sub: sorted[1][0], avoid: sorted[4][0] };
+}
+function checkHexChong(pillars) {
+  const results = [];
+  const jjs = pillars.map(p => p.jj);
+  const cgs = pillars.map(p => p.cg);
+  const hexPairs  = [['자','축'],['인','해'],['묘','술'],['진','유'],['사','신'],['오','미']];
+  const chongPairs= [['자','오'],['축','미'],['인','신'],['묘','유'],['진','술'],['사','해']];
+  const cgHex     = [['갑','기'],['을','경'],['병','신'],['정','임'],['무','계']];
+  hexPairs.forEach(([a,b]) => { if (jjs.includes(a) && jjs.includes(b)) results.push({type:'합',text:`${a}${b} 지지합`}); });
+  chongPairs.forEach(([a,b]) => { if (jjs.includes(a) && jjs.includes(b)) results.push({type:'충',text:`${a}${b} 충`}); });
+  cgHex.forEach(([a,b]) => { if (cgs.includes(a) && cgs.includes(b)) results.push({type:'천간합',text:`${a}${b} 천간합`}); });
+  return results;
+}
+
+function careerInterp(pillars, e5, gender) {
+  const dominant = Object.entries(e5).sort((a,b)=>b[1]-a[1])[0][0];
+  const map = {
+    목: { apt:'창의·기획·언어', field:'문학, 디자인, 광고, 패션, 교육', learn:'스스로 탐구하는 자기주도 학습, 독서와 글쓰기', study:'국어, 사회, 예술, 외국어' },
+    화: { apt:'리더십·발표·소통', field:'경영, 방송, 정치, 사회복지, 법학', learn:'발표와 토론, 그룹 스터디, 동기부여형 환경', study:'사회, 국어, 역사, 윤리' },
+    토: { apt:'분석·실무·신뢰', field:'의학, 공학, 회계, 건축, 농학', learn:'반복 학습과 체계적 정리, 루틴 기반 공부법', study:'수학, 과학, 공학, 보건' },
+    금: { apt:'집중력·정확성·원칙', field:'법학, 군/경찰, 금융, IT, 이과계열', learn:'혼자 집중하는 환경, 명확한 목표와 계획', study:'수학, 과학, 정보, 법학' },
+    수: { apt:'직관·통찰·융합', field:'철학, 의학, 연구직, 예술, 심리학', learn:'호기심 기반 탐구, 다양한 분야의 융합적 접근', study:'과학, 철학, 심리, 의학' },
+  };
+  return map[dominant] || map['토'];
+}
+
+function calcSaju() {
+  const year  = parseInt(document.getElementById('byear').value);
+  const month = parseInt(document.getElementById('bmonth').value);
+  const day   = parseInt(document.getElementById('bday').value);
+  const noT   = document.getElementById('noTime').checked;
+  const hour  = noT ? 12 : (parseInt(document.getElementById('bhour').value) || 0);
+  const name  = document.getElementById('nameInput').value || '이름 미입력';
+
+  if (!year || !month || !day || year < 1900 || year > 2030) {
+    alert('생년월일을 올바르게 입력해 주세요.'); return;
+  }
+
+  const yp = getYearPillar(year);
+  const mp = getMonthPillar(year, month);
+  const dp = getDayPillar(year, month, day);
+  const hp = noT ? null : getHourPillar(dp.cg, hour);
+  const pillars = hp ? [yp, mp, dp, hp] : [yp, mp, dp];
+  const labels  = ['년주', '월주', '일주', '시주'];
+
+  // 음력
+  let lunarStr = '';
+  try {
+    const ls = lunisolar(`${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`);
+    lunarStr = `음력 ${ls.lunar.year}년 ${ls.lunar.month}월 ${ls.lunar.day}일`;
+  } catch(e) { lunarStr = '음력 변환 불가'; }
+
+  document.getElementById('resultName').textContent = `${name}님의 사주팔자`;
+  document.getElementById('lunarDate').textContent  = lunarStr;
+
+  // 사주 테이블
+  const tbl = document.getElementById('sajuTable');
+  tbl.innerHTML = ['년주','월주','일주','시주'].map((lbl, i) => {
+    const p = pillars[i];
+    if (!p) return `<div class="pillar-card" style="opacity:.4"><div class="pillar-label">${lbl}</div><div class="pillar-hj" style="font-size:1.2rem;color:var(--muted)">미입력</div></div>`;
+    const cge5 = E5_MAP[p.cg] || '';
+    const jje5 = E5_MAP[p.jj] || '';
+    return `
+      <div class="pillar-card">
+        <div class="pillar-label">${lbl}</div>
+        <div class="pillar-hj">${p.cgHJ}<br>${p.jjHJ}</div>
+        <div class="pillar-kr">${p.cg} ${p.jj}</div>
+        <div class="pillar-e5">
+          ${cge5 ? `<span class="e5-tag ${E5_COLOR[cge5]}">${cge5}</span>` : ''}
+          ${jje5 ? `<span class="e5-tag ${E5_COLOR[jje5]}">${jje5}</span>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+
+  // 오행 분포
+  const e5 = calcE5(pillars);
+  window._lastE5 = e5;  // 리포트 연동용
+  const maxE5 = Math.max(...Object.values(e5), 1);
+  const e5Names = { 목:'木', 화:'火', 토:'土', 금:'金', 수:'水' };
+  document.getElementById('e5Bars').innerHTML = Object.entries(e5).map(([k,v]) =>
+    `<div class="e5-bar-row">
+       <span class="e5-bar-label">${e5Names[k]}</span>
+       <div class="e5-bar-bg"><div class="e5-bar-fill" style="width:${v/maxE5*100}%;background:${E5_BAR[k]}"></div></div>
+       <span class="e5-bar-count">${v}</span>
+     </div>`).join('');
+
+  // 합충
+  const hcs = checkHexChong(pillars);
+  document.getElementById('hexChongList').innerHTML = hcs.length
+    ? hcs.map(h => `<div class="hexchong-item hexchong-${h.type}">${h.type === '합' ? '🤝' : h.type === '충' ? '⚡' : '🔗'} ${h.text}</div>`).join('')
+    : '<div class="hexchong-없음">특별한 합충 없음</div>';
+
+  const ys = getYongshin(e5);
+  const career = careerInterp(pillars, e5, selectedGender);
+  const dom = Object.entries(e5).sort((a,b)=>b[1]-a[1])[0][0];
+  const domMap = {목:'木(목)',화:'火(화)',토:'土(토)',금:'金(금)',수:'水(수)'};
+
+  // 탭 내용 — 종합
+  document.getElementById('tab-total').innerHTML = `
+    <div class="interp-block">
+      <h4>✨ 종합 기질 분석</h4>
+      <p>${name}님은 <strong>${domMap[dom]}</strong> 기운이 강한 사주입니다. 타고난 기질은 <strong>${career.apt}</strong> 능력이 뛰어나며, 이러한 성향을 진로에 잘 활용하면 큰 성과를 낼 수 있습니다.</p>
+      <div class="tag-row">
+        <span class="itag">${dom}기운 강세</span>
+        <span class="itag">${career.apt}</span>
+        <span class="itag">진로 적합 계열: ${career.study}</span>
+      </div>
+    </div>
+    <div class="interp-block">
+      <h4>🎯 용신 (도움이 되는 기운)</h4>
+      <p>현재 사주 구성에서 균형을 잡아줄 기운은 <strong>${domMap[ys.main]}</strong>이며, 보조적으로 <strong>${domMap[ys.sub]}</strong>도 도움이 됩니다.</p>
+      <div class="yongshin-row">
+        <span class="ys-tag ys-main">✅ 용신: ${ys.main}</span>
+        <span class="ys-tag ys-sub">➕ 보조: ${ys.sub}</span>
+        <span class="ys-tag ys-avoid">⚠ 주의: ${ys.avoid}</span>
+      </div>
+    </div>`;
+
+  // 탭 — 사주 분석
+  document.getElementById('tab-saju').innerHTML = `
+    <div class="interp-block">
+      <h4>📅 년주 분석 (${yp.cgHJ}${yp.jjHJ} · ${yp.cg}${yp.jj})</h4>
+      <p>타고난 환경과 조상의 기운을 나타냅니다. ${yp.cg}의 기운은 <strong>${E5_MAP[yp.cg] || ''} 오행</strong>으로, 어린 시절의 환경과 학업 기초에 영향을 미칩니다.</p>
+    </div>
+    <div class="interp-block">
+      <h4>📅 월주 분석 (${mp.cgHJ}${mp.jjHJ} · ${mp.cg}${mp.jj})</h4>
+      <p>부모·형제와의 관계 및 청소년기 사회성을 나타냅니다. ${mp.cg}${mp.jj}는 학창 시절의 학습 환경과 친구 관계에 영향을 줍니다.</p>
+    </div>
+    <div class="interp-block">
+      <h4>📅 일주 분석 (${dp.cgHJ}${dp.jjHJ} · ${dp.cg}${dp.jj})</h4>
+      <p>자신의 본질적 성격과 의지를 나타냅니다. 일간 <strong>${dp.cg}(${E5_MAP[dp.cg]})</strong>은 핵심 기질이며, 어떤 상황에서도 변하지 않는 본성입니다.</p>
+    </div>
+    ${hp ? `<div class="interp-block"><h4>📅 시주 분석 (${hp.cgHJ}${hp.jjHJ} · ${hp.cg}${hp.jj})</h4><p>미래 방향과 자녀운, 말년운을 나타냅니다. 시주의 기운은 장기적인 진로 방향과 전문성 발휘에 영향을 미칩니다.</p></div>` : ''}`;
+
+  // 탭 — 오행
+  document.getElementById('tab-e5').innerHTML = `
+    <div class="interp-block">
+      <h4>🌱 오행 분포 해석</h4>
+      <p>오행 분포를 보면 <strong>${dom}(${domMap[dom]})</strong>이 가장 강합니다. 강한 오행은 타고난 강점이지만, 지나치면 부작용이 생길 수 있어 균형이 중요합니다.</p>
+    </div>
+    <div class="interp-block">
+      <h4>⚖️ 오행 균형 가이드</h4>
+      <p>부족한 기운인 <strong>${ys.avoid}(${domMap[ys.avoid]})</strong> 계열은 의식적으로 보완할 필요가 있습니다. 학습 시 약한 오행 계열 과목에 더 시간을 투자하면 균형이 잡힙니다.</p>
+      <div class="tag-row">
+        ${Object.entries(e5).map(([k,v])=>`<span class="itag">${domMap[k]}: ${v}개</span>`).join('')}
+      </div>
+    </div>`;
+
+  // 탭 — 적성·진로
+  document.getElementById('tab-career').innerHTML = `
+    <div class="interp-block">
+      <h4>🎓 타고난 적성</h4>
+      <p>오행 분석을 바탕으로 한 타고난 적성은 <strong>${career.apt}</strong> 분야입니다. 이 방향의 전공·직업군을 선택하면 강점이 극대화됩니다.</p>
+      <div class="tag-row"><span class="itag">핵심 적성: ${career.apt}</span></div>
+    </div>
+    <div class="interp-block">
+      <h4>📚 추천 전공 계열</h4>
+      <p>기질에 맞는 추천 전공 분야: <strong>${career.field}</strong></p>
+      <p style="margin-top:8px">강점이 발휘되는 주요 과목: <strong>${career.study}</strong></p>
+    </div>
+    <div class="interp-block">
+      <h4>📖 맞춤 학습 방법</h4>
+      <p>${career.learn}</p>
+    </div>
+    <div class="interp-block" style="background:rgba(45,106,79,.05);border-color:rgba(45,106,79,.2);">
+      <h4>🐯 백호시연선생 상담 안내</h4>
+      <p>위 결과는 사주팔자의 간략한 분석입니다. 더 깊이 있는 진로·진학 상담을 원하시면 <strong>전문 상담</strong>을 통해 구체적인 로드맵을 제공받으세요.</p>
+      <div style="margin-top:12px"><a href="#booking" class="btn btn-green" style="font-size:.84rem;padding:10px 24px;">상담 예약하기 →</a></div>
+    </div>`;
+
+  // 신살·귀인 탭
+  const cheonul = findCheonul(pillars);
+  const shinsal = calcShinsal(pillars);
+  const yangin  = findYangin(pillars);
+  document.getElementById('tab-shinsal').innerHTML = `
+    <div class="interp-block">
+      <h4>👑 천을귀인 (天乙貴人)</h4>
+      <p>일간 <strong>${dp.cg}(${dp.cgHJ})</strong>의 천을귀인은 <strong>${cheonul.list.map(j => j + '(' + JJ_HJ[JIJI.indexOf(j)] + ')').join(', ')}</strong>입니다.
+      천을귀인이 사주에 존재하면 위기 때 귀인의 도움을 받고 어려운 상황을 지혜롭게 극복합니다.</p>
+      <div class="cheonul-wrap">
+        ${cheonul.list.map(jj => {
+          const has = cheonul.present.includes(jj);
+          return `<span class="cheonul-tag ${has ? 'cheonul-present' : 'cheonul-absent'}">
+            ${has ? '✅' : '○'} ${jj}(${JJ_HJ[JIJI.indexOf(jj)]}) ${has ? '— 사주에 있음' : '— 사주에 없음'}
+          </span>`;
+        }).join('')}
+      </div>
+      ${cheonul.present.length > 0 ? '<p class="cheonul-notice">🎉 천을귀인이 사주에 있어 귀인의 도움과 길운이 강합니다!</p>' : ''}
+    </div>
+    <div class="interp-block">
+      <h4>🌟 신살 분석 (년지 ${yp.jj} 기준)</h4>
+      ${shinsal.length > 0 ? `
+        <div class="shinsal-grid">${shinsal.map(s => `<div class="shinsal-tag">${s.emoji} ${s.name}</div>`).join('')}</div>
+        ${shinsal.map(s => `<p style="font-size:.8rem;color:var(--text);margin-top:10px">${s.emoji} <strong>${s.name}</strong>: ${s.desc}</p>`).join('')}
+      ` : '<p class="shinsal-none">특별한 신살이 발견되지 않았습니다.</p>'}
+    </div>
+    <div class="interp-block">
+      <h4>⚔️ 양인살 (羊刃殺)</h4>
+      <p>일간 <strong>${dp.cg}</strong>의 양인지는 <strong>${yangin.target}(${JJ_HJ[JIJI.indexOf(yangin.target)]})</strong>입니다.
+      ${yangin.present
+        ? '사주에 <strong>양인살이 있어</strong> 강한 의지력과 추진력을 지니며, 전문직·경쟁 분야에서 두각을 나타냅니다.'
+        : '사주에 양인살이 없어 비교적 온화하고 협력적인 성향을 가집니다.'}</p>
+    </div>
+    <div class="interp-block" style="background:rgba(45,106,79,.05);border-color:rgba(45,106,79,.2);">
+      <h4>🐯 백호시연선생 상담 안내</h4>
+      <p style="font-size:.82rem;color:var(--muted)">위 결과는 간략한 신살·귀인 분석입니다. 더 깊이 있는 진로·진학 상담을 원하시면 <strong>전문 상담</strong>을 통해 구체적인 로드맵을 제공받으세요.</p>
+      <div style="margin-top:12px"><a href="#booking" class="btn btn-green" style="font-size:.84rem;padding:10px 24px;">상담 예약하기 →</a></div>
+    </div>`;
+
+  document.getElementById('resultEmpty').style.display = 'none';
+  document.getElementById('resultBox').classList.add('visible');
+  showTab('total');
+}
+
+function showTab(name) {
+  document.querySelectorAll('.tab-btn').forEach((b,i) => {
+    b.classList.toggle('active', ['total','saju','e5','career','shinsal'][i] === name);
+  });
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ══════════════════════════════════
+//  예약 캘린더
+// ══════════════════════════════════
+let curYear, curMonth, selectedDate = null, selectedTime = null;
+const TIMES = ['10:00','11:00','13:00','14:00','15:00','16:00','17:00'];
+
+function initCal() {
+  const t = new Date();
+  curYear  = t.getFullYear();
+  curMonth = t.getMonth() + 1;
+  renderCal();
+}
+function renderCal() {
+  const mn = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  document.getElementById('calMonth').textContent = `${curYear}년 ${mn[curMonth-1]}`;
+  const first = new Date(curYear, curMonth - 1, 1).getDay();
+  const days  = new Date(curYear, curMonth, 0).getDate();
+  const today = new Date(); today.setHours(0,0,0,0);
+  const bks   = getBookings();
+  let html = '';
+  for (let i = 0; i < first; i++) html += '<div class="cal-day empty"></div>';
+  for (let d = 1; d <= days; d++) {
+    const dt  = new Date(curYear, curMonth - 1, d);
+    const key = `${curYear}-${String(curMonth).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const isSun = dt.getDay() === 0;
+    const past  = dt < today;
+    const hasBk = bks.some(b => b.date === key);
+    let cls = 'cal-day';
+    if (isSun) cls += ' sun-col';
+    if (past || isSun) cls += ' disabled';
+    if (dt.toDateString() === today.toDateString()) cls += ' today';
+    if (key === selectedDate) cls += ' selected';
+    if (hasBk) cls += ' has-booking';
+    html += `<div class="${cls}" onclick="${past||isSun?'':'selectDate(\''+key+'\')'}"> ${d}</div>`;
+  }
+  document.getElementById('calDays').innerHTML = html;
+  renderTimes();
+}
+function prevMonth() { if (curMonth === 1) { curYear--; curMonth = 12; } else curMonth--; renderCal(); }
+function nextMonth() { if (curMonth === 12) { curYear++; curMonth = 1; } else curMonth++; renderCal(); }
+function selectDate(date) {
+  selectedDate = date; selectedTime = null;
+  document.getElementById('selectedDateTime').value = '';
+  renderCal(); renderTimes();
+}
+function renderTimes() {
+  if (!selectedDate) { document.getElementById('timeArea').innerHTML = '<div class="no-date-msg">날짜를 먼저 선택해 주세요</div>'; return; }
+  const bks = getBookings().filter(b => b.date === selectedDate).map(b => b.time);
+  let html = '<div class="time-grid">';
+  TIMES.forEach(t => {
+    const booked = bks.includes(t);
+    const sel    = t === selectedTime;
+    html += `<div class="time-slot ${booked?'booked':''} ${sel?'selected':''}" onclick="${booked?'':'selectTime(\''+t+'\')'}">${t}</div>`;
+  });
+  html += '</div>';
+  document.getElementById('timeArea').innerHTML = html;
+}
+function selectTime(t) {
+  selectedTime = t;
+  document.getElementById('selectedDateTime').value = selectedDate + ' ' + t;
+  renderTimes();
+}
+function getBookings() {
+  try { return JSON.parse(localStorage.getItem('bkhoBookings') || '[]'); } catch { return []; }
+}
+function saveBookings(list) { localStorage.setItem('bkhoBookings', JSON.stringify(list)); }
+
+function makeReservation() {
+  const name  = document.getElementById('bkName').value.trim();
+  const phone = document.getElementById('bkPhone').value.trim();
+  const stu   = document.getElementById('bkStudent').value.trim();
+  const birth = document.getElementById('bkBirth').value.trim();
+  if (!selectedDate || !selectedTime) { alert('날짜와 시간을 선택해 주세요.'); return; }
+  if (!name || !phone) { alert('이름과 연락처를 입력해 주세요.'); return; }
+  const bks = getBookings();
+  if (bks.some(b => b.date === selectedDate && b.time === selectedTime)) {
+    alert('이미 예약된 시간입니다. 다른 시간을 선택해 주세요.'); return;
+  }
+  bks.push({ date: selectedDate, time: selectedTime, name, phone, student: stu, birth, id: Date.now() });
+  saveBookings(bks);
+  alert(`✅ 예약이 완료되었습니다!\n\n일시: ${selectedDate} ${selectedTime}\n예약자: ${name}\n학생: ${stu || '미입력'}\n\n담당자 확인 후 연락드리겠습니다.`);
+  selectedDate = null; selectedTime = null;
+  document.getElementById('selectedDateTime').value = '';
+  ['bkName','bkPhone','bkStudent','bkBirth','bkMemo'].forEach(id => { document.getElementById(id).value = ''; });
+  renderCal(); renderBookingList();
+}
+
+function renderBookingList() {
+  const bks = getBookings();
+  const el  = document.getElementById('bookingList');
+  if (!bks.length) { el.innerHTML = '<div class="empty-bookings">예약 내역이 없습니다</div>'; return; }
+  el.innerHTML = bks.sort((a,b) => a.date > b.date ? 1 : -1).map(b => `
+    <div class="booking-item">
+      <div class="booking-item-info">
+        <div class="b-date">📅 ${b.date} ${b.time}</div>
+        <div class="b-name">${b.name} ${b.student ? '· '+b.student : ''}</div>
+      </div>
+      <button class="cancel-btn" onclick="cancelBooking(${b.id})">취소</button>
+    </div>`).join('');
+}
+function cancelBooking(id) {
+  if (!confirm('예약을 취소하시겠습니까?')) return;
+  const bks = getBookings().filter(b => b.id !== id);
+  saveBookings(bks);
+  renderCal(); renderBookingList();
+}
+
+// 내비게이션 활성화
+window.addEventListener('scroll', () => {
+  const sections = ['why','service','process','saju','report','booking'];
+  const links    = document.querySelectorAll('.nav-links a');
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = id;
+  });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+});
+
+// ══════════════════════════════════
+//  진로 리포트
+// ══════════════════════════════════
+let reportTrack = 'all';
+let reportGender = 'male';
+
+function updateGradeDisplay(v) {
+  document.getElementById('gradeDisplay').textContent = parseFloat(v).toFixed(1) + ' 등급';
+}
+function setTrack(t) {
+  reportTrack = t;
+  ['all','1','2','3'].forEach(k => {
+    const el = document.getElementById('track-' + k);
+    if (el) el.classList.toggle('active', k === t);
+  });
+}
+function setRGender(g) {
+  reportGender = g;
+  const ms = 'flex:1;padding:9px;border-radius:8px;font-size:.85rem;cursor:pointer;font-family:inherit;';
+  document.getElementById('rGMale').style.cssText   = ms + (g==='male'   ? 'border:1.5px solid var(--navy);background:rgba(26,42,74,.07);color:var(--navy);font-weight:600' : 'border:1.5px solid var(--border);background:var(--cream);color:var(--muted)');
+  document.getElementById('rGFemale').style.cssText = ms + (g==='female' ? 'border:1.5px solid var(--navy);background:rgba(26,42,74,.07);color:var(--navy);font-weight:600' : 'border:1.5px solid var(--border);background:var(--cream);color:var(--muted)');
+}
+function toggleSajuLink() {
+  const use = document.getElementById('useSaju').checked;
+  const status = document.getElementById('sajuLinkStatus');
+  if (use) {
+    if (document.getElementById('resultBox').classList.contains('visible')) {
+      status.textContent = '✅ 사주 계산기 결과가 연동됩니다';
+      document.getElementById('reportSajuInputs').style.display = 'none';
+    } else {
+      status.textContent = '⚠️ 위 사주 계산기에서 먼저 계산해 주세요';
+      document.getElementById('useSaju').checked = false;
+      document.getElementById('reportSajuInputs').style.display = 'block';
+    }
+  } else {
+    status.textContent = '';
+    document.getElementById('reportSajuInputs').style.display = 'block';
+  }
+}
+
+// 오행 → 전공 분야 매핑 테이블
+const FIELD_MAP = [
+  // 목(木) — 창의·교육·언어
+  { field:'교육·사범', e5:'목', cat:['1'],      desc:'학생 교육과 인재 양성에 적합한 분야입니다. 언어 능력과 창의적 사고가 강점으로 발휘됩니다.',     keys:['교육','사범','교대','유아','초등','중등','영어교','국어교','수학교','역사교','윤리교'] },
+  { field:'어문·외국어', e5:'목', cat:['1'],    desc:'언어 감각과 국제적 역량이 요구되는 분야로, 글로벌 진로 폭이 넓습니다.',                          keys:['국어','영어','외국어','어문','문학','독어','불어','일어','중어','한문','스페인','러시아','언어','문예창작'] },
+  { field:'디자인·문화콘텐츠', e5:'목', cat:['1','3'], desc:'창의성과 미적 감각을 발휘하는 분야입니다. 디지털 미디어와 결합된 다양한 진로가 열려 있습니다.',  keys:['디자인','패션','시각','영상','애니','공예','문화콘텐츠','게임','광고','홍보'] },
+  { field:'역사·인문학', e5:'목', cat:['1'],    desc:'깊은 인문학적 통찰과 분석 능력을 기르는 분야입니다.',                                              keys:['역사','문화재','고고','민속','한국사','인문'] },
+  // 화(火) — 리더십·경영·사회
+  { field:'경영·경제', e5:'화', cat:['1'],      desc:'리더십과 분석력이 결합된 분야로, 다양한 산업에서 핵심 역할을 담당합니다.',                           keys:['경영','경제','무역','회계','금융','세무','보험','유통','마케팅','비즈니스','벤처'] },
+  { field:'법학·행정·정치', e5:'화', cat:['1'], desc:'사회 규범과 공공서비스를 이끄는 분야로, 논리적 사고력과 설득력이 중요합니다.',                        keys:['법학','법','행정','정치','외교','공공','정책','자치','국제관계'] },
+  { field:'언론·미디어', e5:'화', cat:['1'],    desc:'미디어와 커뮤니케이션으로 사회에 영향을 미치는 분야입니다.',                                          keys:['언론','신문','방송','미디어','커뮤니케이션','저널','홍보'] },
+  { field:'사회·심리·복지', e5:'화', cat:['1'], desc:'사람과 사회를 이해하고 돕는 분야로, 공감 능력이 핵심입니다.',                                         keys:['사회복지','사회학','심리','아동','청소년','노인','상담','복지'] },
+  // 토(土) — 안정·전문직·의료
+  { field:'의학·치의학·한의학', e5:'토', cat:['4'], desc:'전문 의학 지식으로 생명을 다루는 고도의 전문직입니다. 최상위 등급이 요구됩니다.',                  keys:['의학','의예','치의','치대','한의','의학부','의과'] },
+  { field:'간호·보건·의료기술', e5:'토', cat:['1','4'], desc:'의료 현장에서 환자를 직접 돌보는 전문직으로, 높은 취업률을 자랑합니다.',                      keys:['간호','보건','재활','물리치료','작업치료','방사선','임상병리','의료'] },
+  { field:'약학·수의', e5:'토', cat:['2','4'],  desc:'약물과 생명과학을 전문으로 다루며, 연구직과 임상 모두 진출 가능합니다.',                              keys:['약학','약대','수의','수의대','제약'] },
+  { field:'건축·토목·환경공학', e5:'토', cat:['2'], desc:'안정적 취업과 전문 기술을 겸비한 실용적 공학 분야입니다.',                                       keys:['건축','토목','도시','교통','도로','환경공학','안전','건설'] },
+  { field:'농·식품·환경·산림', e5:'토', cat:['2'], desc:'지속가능한 미래를 위한 핵심 분야로, 생명·환경과 결합된 다양한 전공이 있습니다.',                    keys:['농학','농업','식품','식물','원예','조경','생물자원','환경','산림','수산'] },
+  // 금(金) — 집중·정밀·IT
+  { field:'컴퓨터·AI·소프트웨어', e5:'금', cat:['2'], desc:'4차 산업혁명의 핵심 분야로, 가장 빠르게 성장하는 취업 시장입니다.',                             keys:['컴퓨터','소프트웨어','정보','IT','인공지능','AI','데이터','사이버','시스템공학'] },
+  { field:'전자·전기·반도체', e5:'금', cat:['2'],    desc:'대기업 취업률 최상위 분야로, 반도체 산업과 함께 급성장 중입니다.',                               keys:['전자','전기','반도체','통신','광학','제어','로봇','전자공학','전기공학'] },
+  { field:'기계·항공·자동차', e5:'금', cat:['2'],    desc:'정밀 기계와 미래 모빌리티를 이끄는 분야입니다.',                                                keys:['기계','항공','우주','자동차','선박','조선','메카트로닉스','나노'] },
+  { field:'수학·물리·화학·소재', e5:'금', cat:['2'], desc:'이공계의 기초를 이루는 분야로, 대학원·연구직에 유리합니다.',                                     keys:['수학','물리','화학','통계','응용수학','수리','재료','신소재'] },
+  // 수(水) — 직관·탐구·예술
+  { field:'예술·음악·미술', e5:'수', cat:['3'],      desc:'독창적 표현력과 예술적 감수성을 발휘하는 분야입니다.',                                           keys:['음악','미술','예술','성악','기악','작곡','회화','조소','동양화','서양화','공연','연극','영화','무용'] },
+  { field:'체육·스포츠과학', e5:'수', cat:['3'],     desc:'신체 능력과 스포츠 과학을 결합한 분야입니다.',                                                   keys:['체육','스포츠','골프','태권도','축구','야구','수영','레저'] },
+  { field:'생명과학·바이오', e5:'수', cat:['2'],     desc:'생명의 신비를 탐구하고 미래 바이오산업을 이끌 분야입니다.',                                       keys:['생명','바이오','생물','생화학','분자','유전','미생물','생명공학'] },
+  { field:'해양·지구과학', e5:'수', cat:['2'],       desc:'지구와 해양 환경을 탐구하는 분야로, 기후변화 대응의 핵심입니다.',                                  keys:['해양','지리','지구','지질','천문','기상','대기'] },
+  { field:'철학·심리·신학', e5:'수', cat:['1'],      desc:'존재와 인간 본질을 탐구하는 분야로, 상담·연구·종교 분야로 진출합니다.',                           keys:['철학','신학','윤리','종교','심리학'] },
+];
+
+const E5_KO   = { 목:'木(목)', 화:'火(화)', 토:'土(토)', 금:'金(금)', 수:'水(수)' };
+const E5_EMJ  = { 목:'🌱', 화:'🔥', 토:'🏔', 금:'⚡', 수:'💧' };
+const E5_DESC = { 목:'창의·교육', 화:'리더십·소통', 토:'안정·전문', 금:'집중·IT', 수:'직관·탐구' };
+
+function getGradeLabel(g) {
+  if (g <= 1.5) return '최상위권';
+  if (g <= 2.5) return '상위권';
+  if (g <= 3.5) return '중상위권';
+  if (g <= 4.5) return '중위권';
+  if (g <= 5.5) return '중하위권';
+  return '하위권';
+}
+
+function matchField(deptName, field) {
+  const d = (deptName || '').toLowerCase();
+  return field.keys.some(k => d.includes(k.toLowerCase()));
+}
+
+function generateReport() {
+  if (typeof ADMISSION_DB === 'undefined') {
+    alert('입시 DB를 불러오는 중입니다. 잠시 후 다시 시도해 주세요.');
+    return;
+  }
+  const grade = parseFloat(document.getElementById('gradeSlider').value);
+  let tol = 0.7;
+
+  // 오행 분석
+  let dominantE5 = null;
+  const useSaju = document.getElementById('useSaju').checked;
+  if (useSaju && window._lastE5) {
+    dominantE5 = Object.entries(window._lastE5).sort((a,b)=>b[1]-a[1])[0][0];
+  } else {
+    const y = parseInt(document.getElementById('rByear').value);
+    const m = parseInt(document.getElementById('rBmonth').value);
+    const d = parseInt(document.getElementById('rBday').value);
+    if (y && m && d && y >= 1900 && y <= 2030) {
+      const e5 = calcE5([getYearPillar(y), getMonthPillar(y,m), getDayPillar(y,m,d)]);
+      window._lastE5 = e5;
+      dominantE5 = Object.entries(e5).sort((a,b)=>b[1]-a[1])[0][0];
+    }
+  }
+
+  // DB 필터링 (등급 허용 범위 내)
+  let filtered = ADMISSION_DB.filter(item => {
+    const gOk = Math.abs(item.g - grade) <= tol;
+    const tOk = reportTrack === 'all' || item.c === reportTrack;
+    return gOk && tOk;
+  });
+  if (filtered.length < 50) {
+    filtered = ADMISSION_DB.filter(item => {
+      return Math.abs(item.g - grade) <= 1.5 && (reportTrack === 'all' || item.c === reportTrack);
+    });
+  }
+
+  // 분야별 매칭
+  const fieldResults = FIELD_MAP.map(field => {
+    const catOk = reportTrack === 'all' || field.cat.includes(reportTrack);
+    if (!catOk) return null;
+    const matching = filtered
+      .filter(item => matchField(item.d, field))
+      .sort((a, b) => Math.abs(a.g - grade) - Math.abs(b.g - grade));
+    const seenU = new Set();
+    const univs = [];
+    for (const item of matching) {
+      if (!seenU.has(item.u)) { seenU.add(item.u); univs.push(item); }
+      if (univs.length >= 5) break;
+    }
+    return univs.length ? { ...field, univs } : null;
+  }).filter(Boolean);
+
+  if (fieldResults.length === 0) {
+    alert('해당 등급·계열에 맞는 전공 데이터가 부족합니다. 등급 범위나 계열 설정을 조정해 보세요.');
+    return;
+  }
+
+  // 메인 3개: 오행 우선 + 대학 수 많은 순
+  const sorted = [...fieldResults].sort((a, b) => {
+    const aScore = (dominantE5 && a.e5 === dominantE5 ? 50 : 0) + a.univs.length;
+    const bScore = (dominantE5 && b.e5 === dominantE5 ? 50 : 0) + b.univs.length;
+    return bScore - aScore;
+  });
+  const main = sorted.slice(0, 3);
+  const mainNames = new Set(main.map(f => f.field));
+
+  // 서브 5개: 메인과 다른 오행에서 다양하게
+  const sub = fieldResults
+    .filter(f => !mainNames.has(f.field))
+    .sort((a, b) => b.univs.length - a.univs.length)
+    .slice(0, 5);
+
+  renderReport(main, sub, { grade, dominantE5, gradeLabel: getGradeLabel(grade) });
+}
+
+function renderReport(main, sub, info) {
+  const headerE5 = info.dominantE5
+    ? `${E5_EMJ[info.dominantE5]} 주오행 ${E5_KO[info.dominantE5]} (${E5_DESC[info.dominantE5]})`
+    : '☯ 오행 미분석';
+
+  const mainHtml = main.map((f, i) => `
+    <div class="major-card">
+      <div class="major-card-hd">
+        <div>
+          <div class="major-name">🎯 메인 ${i+1}. ${f.field}</div>
+        </div>
+        <span class="me5 me5-${f.e5}">${E5_KO[f.e5]}</span>
+      </div>
+      <div class="major-desc">${f.desc}</div>
+      <div class="univ-list">
+        ${f.univs.slice(0,4).map(u => {
+          const dept = u.d.length > 20 ? u.d.slice(0,20) + '…' : u.d;
+          return `<div class="univ-row">
+            <div><span class="univ-name">${u.u}</span><span class="univ-dept">${dept}</span></div>
+            <span class="univ-grade">${u.g.toFixed(1)}등급</span>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`).join('');
+
+  const subHtml = `<div class="sub-grid">
+    ${sub.map((f, i) => `
+      <div class="sub-card">
+        <div class="sub-name">${E5_EMJ[f.e5] || '📌'} 서브 ${i+1}. ${f.field}</div>
+        <div class="sub-univs">${f.univs.slice(0,3).map(u => `${u.u} ${u.g.toFixed(1)}등급`).join('<br>')}</div>
+      </div>`).join('')}
+  </div>`;
+
+  const html = `
+    <div class="report-header">
+      <div class="report-header-top">
+        <div class="report-logo-circle">📋</div>
+        <div>
+          <div class="report-title-txt">맞춤형 진로·전공 추천 리포트</div>
+          <div class="report-subtitle-txt">백호시연선생 · 명리학 기반 진로 분석</div>
+        </div>
+      </div>
+      <div class="report-meta">
+        <span class="report-meta-item">📊 내신 ${info.grade.toFixed(1)}등급 (${info.gradeLabel})</span>
+        <span class="report-meta-item">${headerE5}</span>
+        <span class="report-meta-item">🗂 2026~2027 수시 DB 기반</span>
+      </div>
+    </div>
+    <div class="report-body">
+      <div class="report-section">
+        <div class="report-section-hd">
+          <h3>⭐ 메인 추천 전공 3선</h3>
+          <span class="rsec-badge">사주 오행 · 등급 최적 매칭</span>
+        </div>
+        ${mainHtml}
+      </div>
+      <div class="report-section">
+        <div class="report-section-hd">
+          <h3>📌 서브 추천 전공 5선</h3>
+          <span class="rsec-badge">다양한 진로 가능성</span>
+        </div>
+        ${subHtml}
+      </div>
+      <div class="report-footer-note">
+        ⚠️ <strong>주의사항</strong>: 본 리포트는 2026~2027 수시 입시결과 데이터와 사주팔자 분석을 결합한 <strong>참고 자료</strong>입니다.
+        실제 전공 선택과 입시 전략은 백호시연선생과의 1:1 상담을 통해 더 깊이 있게 진행하시길 권장드립니다.
+        <div style="margin-top:12px">
+          <a href="#booking" class="btn btn-green" style="font-size:.84rem;padding:10px 24px;">상담 예약하기 →</a>
+        </div>
+      </div>
+    </div>`;
+
+  const out = document.getElementById('reportOutput');
+  out.innerHTML = html;
+  out.style.display = 'block';
+  setTimeout(() => out.scrollIntoView({ behavior:'smooth', block:'start' }), 100);
+}
+
+// 오늘의 일진
+function renderIljin() {
+  const today = new Date();
+  const y = today.getFullYear(), m = today.getMonth()+1, d = today.getDate();
+  const yp = getYearPillar(y);
+  const mp = getMonthPillar(y, m);
+  const dp = getDayPillar(y, m, d);
+  const mn = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  let lunarStr = '';
+  try {
+    const ls = lunisolar(`${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`);
+    lunarStr = `음력 ${ls.lunar.month}월 ${ls.lunar.day}일`;
+  } catch(e) { lunarStr = ''; }
+  const pillars = [
+    { lbl:'년주', p:yp }, { lbl:'월주', p:mp }, { lbl:'일주', p:dp }
+  ];
+  document.getElementById('iljinBar').innerHTML = `
+    <div>
+      <div class="iljin-label">오늘의 일진 (만세력)</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-top:2px">${y}년 ${mn[m-1]} ${d}일 ${lunarStr}</div>
+    </div>
+    <div class="iljin-pillars">
+      ${pillars.map(({lbl,p}) => `
+        <div class="iljin-pill">
+          <div class="iljin-pill-lbl">${lbl}</div>
+          <div class="iljin-pill-hj">${p.cgHJ}${p.jjHJ}</div>
+          <div class="iljin-pill-kr">${p.cg}${p.jj}</div>
+        </div>`).join('')}
+    </div>`;
+}
+
+initCal();
+renderBookingList();
+renderIljin();
+</script>
+</body>
+</html>
